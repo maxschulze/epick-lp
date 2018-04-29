@@ -1,18 +1,20 @@
 <!doctype html>
-<html ng-app="">
+<html ng-app="epickApp">
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>Login - EPICK.GG</title>
     <meta name="description" content="The new team building tool for Overwatch" />
     <meta name="url" content="https://epick.gg/" />
 
     <meta name="coverage" content="Worldwide">
     <meta name="distribution" content="Global">
 
-    <link href="/stylesheets/site-2714dc4a.css" rel="stylesheet" />
+    <link href="/stylesheets/site-86950578.css" rel="stylesheet" />
+    <link href="/stylesheets/select.min-10b8b166.css" rel="stylesheet" />
+    <link href="/stylesheets/loading-bar.min-8cef61bf.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
     
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
@@ -22,6 +24,8 @@
     <meta name="theme-color" content="#1e1727">
     <meta property="fb:app_id" content="466308243563271">
     
+      <title>Login - EPICK.GG</title>
+      
       <meta property="og:url" content="https://epick.gg/" />
       <meta property="og:type" content="product" />
       <meta property="og:title" content="EPICK.GG" />
@@ -30,14 +34,41 @@
       <meta property="og:site_name" content="EPICK.GG">
       <meta property="og:locale" content="en_US">
     
-
+    
+    <script>
+    var _rollbarConfig = {
+        accessToken: "a18dc79b2f1149f49901a72022901c61",
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+            environment: "production"
+        },
+        enabled: false
+    };
+    !function(r){function e(t){if(o[t])return o[t].exports;var n=o[t]={exports:{},id:t,loaded:!1};return r[t].call(n.exports,n,n.exports,e),n.loaded=!0,n.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e,o){"use strict";var t=o(1).Rollbar,n=o(2);_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://d37gvrvc0wt4s1.cloudfront.net/js/v1.9/rollbar.min.js";var a=t.init(window,_rollbarConfig),i=n(a,_rollbarConfig);a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,i)},function(r,e){"use strict";function o(r){return function(){try{return r.apply(this,arguments)}catch(e){try{console.error("[Rollbar]: Internal error",e)}catch(o){}}}}function t(r,e,o){window._rollbarWrappedError&&(o[4]||(o[4]=window._rollbarWrappedError),o[5]||(o[5]=window._rollbarWrappedError._rollbarContext),window._rollbarWrappedError=null),r.uncaughtError.apply(r,o),e&&e.apply(window,o)}function n(r){var e=function(){var e=Array.prototype.slice.call(arguments,0);t(r,r._rollbarOldOnError,e)};return e.belongsToShim=!0,e}function a(r){this.shimId=++c,this.notifier=null,this.parentShim=r,this._rollbarOldOnError=null}function i(r){var e=a;return o(function(){if(this.notifier)return this.notifier[r].apply(this.notifier,arguments);var o=this,t="scope"===r;t&&(o=new e(this));var n=Array.prototype.slice.call(arguments,0),a={shim:o,method:r,args:n,ts:new Date};return window._rollbarShimQueue.push(a),t?o:void 0})}function l(r,e){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){var o=e.addEventListener;e.addEventListener=function(e,t,n){o.call(this,e,r.wrap(t),n)};var t=e.removeEventListener;e.removeEventListener=function(r,e,o){t.call(this,r,e&&e._wrapped?e._wrapped:e,o)}}}var c=0;a.init=function(r,e){var t=e.globalAlias||"Rollbar";if("object"==typeof r[t])return r[t];r._rollbarShimQueue=[],r._rollbarWrappedError=null,e=e||{};var i=new a;return o(function(){if(i.configure(e),e.captureUncaught){i._rollbarOldOnError=r.onerror,r.onerror=n(i);var o,a,c="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(o=0;o<c.length;++o)a=c[o],r[a]&&r[a].prototype&&l(i,r[a].prototype)}return e.captureUnhandledRejections&&(i._unhandledRejectionHandler=function(r){var e=r.reason,o=r.promise,t=r.detail;!e&&t&&(e=t.reason,o=t.promise),i.unhandledRejection(e,o)},r.addEventListener("unhandledrejection",i._unhandledRejectionHandler)),r[t]=i,i})()},a.prototype.loadFull=function(r,e,t,n,a){var i=function(){var e;if(void 0===r._rollbarPayloadQueue){var o,t,n,i;for(e=new Error("rollbar.js did not load");o=r._rollbarShimQueue.shift();)for(n=o.args,i=0;i<n.length;++i)if(t=n[i],"function"==typeof t){t(e);break}}"function"==typeof a&&a(e)},l=!1,c=e.createElement("script"),p=e.getElementsByTagName("script")[0],d=p.parentNode;c.crossOrigin="",c.src=n.rollbarJsUrl,c.async=!t,c.onload=c.onreadystatechange=o(function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){c.onload=c.onreadystatechange=null;try{d.removeChild(c)}catch(r){}l=!0,i()}}),d.insertBefore(c,p)},a.prototype.wrap=function(r,e){try{var o;if(o="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._wrapped){r._wrapped=function(){try{return r.apply(this,arguments)}catch(e){throw"string"==typeof e&&(e=new String(e)),e._rollbarContext=o()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e,e}},r._wrapped._isWrap=!0;for(var t in r)r.hasOwnProperty(t)&&(r._wrapped[t]=r[t])}return r._wrapped}catch(n){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError,unhandledRejection".split(","),d=0;d<p.length;++d)a.prototype[p[d]]=i(p[d]);r.exports={Rollbar:a,_rollbarWindowOnError:t}},function(r,e){"use strict";r.exports=function(r,e){return function(o){if(!o&&!window._rollbarInitialized){var t=window.RollbarNotifier,n=e||{},a=n.globalAlias||"Rollbar",i=window.Rollbar.init(n,r);i._processShimQueue(window._rollbarShimQueue||[]),window[a]=i,window._rollbarInitialized=!0,t.processPayloads()}}}}]);
+    // End Rollbar Snippet
+    </script>
+    
     <script type="text/javascript">
       window.epick = {};
       window.epick.heroes = [{"name":"Genji","role":"offense","id":"genji"},{"name":"McCree","role":"offense","id":"mccree"},{"name":"Pharah","role":"offense","id":"pharah"},{"name":"Reaper","role":"offense","id":"reaper"},{"name":"Soldier:76","role":"offense","id":"soldier76"},{"name":"Tracer","role":"offense","id":"tracer"},{"name":"Mei","role":"defense","id":"mei"},{"name":"Bastion","role":"defense","id":"bastion"},{"name":"Hanzo","role":"defense","id":"hanzo"},{"name":"Junkrat","role":"defense","id":"junkrat"},{"name":"Torbjorn","role":"defense","id":"torbjorn"},{"name":"Widowmaker","role":"defense","id":"widowmaker"},{"name":"D.VA","role":"tank","id":"dva"},{"name":"Reinhardt","role":"tank","id":"reinhardt"},{"name":"Roadhog","role":"tank","id":"roadhog"},{"name":"Winston","role":"tank","id":"winston"},{"name":"Zarya","role":"tank","id":"zarya"},{"name":"Ana","role":"support","id":"ana"},{"name":"Lucio","role":"support","id":"lucio"},{"name":"Mercy","role":"support","id":"mercy"},{"name":"Symettra","role":"support","id":"symettra"},{"name":"Zenyatta","role":"support","id":"zenyatta"}];
+      window.epick.regions = [{"name":"Asia","id":"asia"},{"name":"Europe","id":"europe"},{"name":"Americas","id":"americas"},{"name":"Oceania","id":"oceania"}];
+      window.epick.ages = [{"name":"Aim god! (Under 14)","id":"Aim god! (Under 14)"},{"name":"Too much time! (14 to 16)","id":"Too much time! (14 to 16)"},{"name":"Getting Serious! (16 to 18)","id":"Getting Serious! (16 to 18)"},{"name":"School’s out! (18 to 21)","id":"School’s out! (18 to 21)"},{"name":"Student’s paradise?! (21 to 30)","id":"Student’s paradise?! (21 to 30)"},{"name":"Oldschool! (30 to 40)","id":"Oldschool! (30 to 40)"},{"name":"Oldschool? Child’s play! (40+)","id":"Oldschool? Child’s play! (40+)"}];
+      window.epick.genders = [{"name":"Male","id":"Male"},{"name":"Female","id":"Female"},{"name":"Robot","id":"Robot"},{"name":"Alien","id":"Alien"},{"name":"Raid Boss","id":"Raid Boss"},{"name":"Trash Mob","id":"Trash Mob"},{"name":"Murloc","id":"Murloc"},{"name":"Nazgul","id":"Nazgul"},{"name":"Zombie","id":"Zombie"}];
+      window.epick.game_times = [{"name":"1-3 hours","id":"1-3 hours"},{"name":"3-7 hours","id":"3-7 hours"},{"name":"7-14 hours","id":"7-14 hours"},{"name":"14+ hours","id":"14+ hours"}];
+      window.epick.locations = [{"name":"Germany","id":"DEU"},{"name":"United States","id":"USA"},{"name":"France","id":"FRA"},{"name":"Spain","id":"ESP"},{"name":"Japan","id":"JPN"},{"name":"China","id":"CHN"},{"name":"Korea, Republic of","id":"KOR"},{"name":"Andorra","id":"AND"},{"name":"United Arab Emirates","id":"ARE"},{"name":"Afghanistan","id":"AFG"},{"name":"Antigua and Barbuda","id":"ATG"},{"name":"Anguilla","id":"AIA"},{"name":"Albania","id":"ALB"},{"name":"Armenia","id":"ARM"},{"name":"Angola","id":"AGO"},{"name":"Antarctica","id":"ATA"},{"name":"Argentina","id":"ARG"},{"name":"American Samoa","id":"ASM"},{"name":"Austria","id":"AUT"},{"name":"Australia","id":"AUS"},{"name":"Aruba","id":"ABW"},{"name":"Åland Islands","id":"ALA"},{"name":"Azerbaijan","id":"AZE"},{"name":"Bosnia and Herzegovina","id":"BIH"},{"name":"Barbados","id":"BRB"},{"name":"Bangladesh","id":"BGD"},{"name":"Belgium","id":"BEL"},{"name":"Burkina Faso","id":"BFA"},{"name":"Bulgaria","id":"BGR"},{"name":"Bahrain","id":"BHR"},{"name":"Burundi","id":"BDI"},{"name":"Benin","id":"BEN"},{"name":"Saint Barthélemy","id":"BLM"},{"name":"Bermuda","id":"BMU"},{"name":"Brunei Darussalam","id":"BRN"},{"name":"Bolivia, Plurinational State of","id":"BOL"},{"name":"Bonaire, Sint Eustatius and Saba","id":"BES"},{"name":"Brazil","id":"BRA"},{"name":"Bahamas","id":"BHS"},{"name":"Bhutan","id":"BTN"},{"name":"Bouvet Island","id":"BVT"},{"name":"Botswana","id":"BWA"},{"name":"Belarus","id":"BLR"},{"name":"Belize","id":"BLZ"},{"name":"Canada","id":"CAN"},{"name":"Cocos (Keeling) Islands","id":"CCK"},{"name":"Congo, The Democratic Republic of the","id":"COD"},{"name":"Central African Republic","id":"CAF"},{"name":"Congo","id":"COG"},{"name":"Switzerland","id":"CHE"},{"name":"Côte d'Ivoire","id":"CIV"},{"name":"Cook Islands","id":"COK"},{"name":"Chile","id":"CHL"},{"name":"Cameroon","id":"CMR"},{"name":"Colombia","id":"COL"},{"name":"Costa Rica","id":"CRI"},{"name":"Cuba","id":"CUB"},{"name":"Cape Verde","id":"CPV"},{"name":"Curaçao","id":"CUW"},{"name":"Christmas Island","id":"CXR"},{"name":"Cyprus","id":"CYP"},{"name":"Czech Republic","id":"CZE"},{"name":"Djibouti","id":"DJI"},{"name":"Denmark","id":"DNK"},{"name":"Dominica","id":"DMA"},{"name":"Dominican Republic","id":"DOM"},{"name":"Algeria","id":"DZA"},{"name":"Ecuador","id":"ECU"},{"name":"Estonia","id":"EST"},{"name":"Egypt","id":"EGY"},{"name":"Western Sahara","id":"ESH"},{"name":"Eritrea","id":"ERI"},{"name":"Ethiopia","id":"ETH"},{"name":"Finland","id":"FIN"},{"name":"Fiji","id":"FJI"},{"name":"Falkland Islands (Malvinas)","id":"FLK"},{"name":"Micronesia, Federated States of","id":"FSM"},{"name":"Faroe Islands","id":"FRO"},{"name":"Gabon","id":"GAB"},{"name":"United Kingdom","id":"GBR"},{"name":"Grenada","id":"GRD"},{"name":"Georgia","id":"GEO"},{"name":"French Guiana","id":"GUF"},{"name":"Guernsey","id":"GGY"},{"name":"Ghana","id":"GHA"},{"name":"Gibraltar","id":"GIB"},{"name":"Greenland","id":"GRL"},{"name":"Gambia","id":"GMB"},{"name":"Guinea","id":"GIN"},{"name":"Guadeloupe","id":"GLP"},{"name":"Equatorial Guinea","id":"GNQ"},{"name":"Greece","id":"GRC"},{"name":"South Georgia and the South Sandwich Islands","id":"SGS"},{"name":"Guatemala","id":"GTM"},{"name":"Guam","id":"GUM"},{"name":"Guinea-Bissau","id":"GNB"},{"name":"Guyana","id":"GUY"},{"name":"Hong Kong","id":"HKG"},{"name":"Heard Island and McDonald Islands","id":"HMD"},{"name":"Honduras","id":"HND"},{"name":"Croatia","id":"HRV"},{"name":"Haiti","id":"HTI"},{"name":"Hungary","id":"HUN"},{"name":"Indonesia","id":"IDN"},{"name":"Ireland","id":"IRL"},{"name":"Israel","id":"ISR"},{"name":"Isle of Man","id":"IMN"},{"name":"India","id":"IND"},{"name":"British Indian Ocean Territory","id":"IOT"},{"name":"Iraq","id":"IRQ"},{"name":"Iran, Islamic Republic of","id":"IRN"},{"name":"Iceland","id":"ISL"},{"name":"Italy","id":"ITA"},{"name":"Jersey","id":"JEY"},{"name":"Jamaica","id":"JAM"},{"name":"Jordan","id":"JOR"},{"name":"Kenya","id":"KEN"},{"name":"Kyrgyzstan","id":"KGZ"},{"name":"Cambodia","id":"KHM"},{"name":"Kiribati","id":"KIR"},{"name":"Comoros","id":"COM"},{"name":"Saint Kitts and Nevis","id":"KNA"},{"name":"Korea, Democratic People's Republic of","id":"PRK"},{"name":"Kuwait","id":"KWT"},{"name":"Cayman Islands","id":"CYM"},{"name":"Kazakhstan","id":"KAZ"},{"name":"Lao People's Democratic Republic","id":"LAO"},{"name":"Lebanon","id":"LBN"},{"name":"Saint Lucia","id":"LCA"},{"name":"Liechtenstein","id":"LIE"},{"name":"Sri Lanka","id":"LKA"},{"name":"Liberia","id":"LBR"},{"name":"Lesotho","id":"LSO"},{"name":"Lithuania","id":"LTU"},{"name":"Luxembourg","id":"LUX"},{"name":"Latvia","id":"LVA"},{"name":"Libya","id":"LBY"},{"name":"Morocco","id":"MAR"},{"name":"Monaco","id":"MCO"},{"name":"Moldova, Republic of","id":"MDA"},{"name":"Montenegro","id":"MNE"},{"name":"Saint Martin (French part)","id":"MAF"},{"name":"Madagascar","id":"MDG"},{"name":"Marshall Islands","id":"MHL"},{"name":"Macedonia, Republic of","id":"MKD"},{"name":"Mali","id":"MLI"},{"name":"Myanmar","id":"MMR"},{"name":"Mongolia","id":"MNG"},{"name":"Macao","id":"MAC"},{"name":"Northern Mariana Islands","id":"MNP"},{"name":"Martinique","id":"MTQ"},{"name":"Mauritania","id":"MRT"},{"name":"Montserrat","id":"MSR"},{"name":"Malta","id":"MLT"},{"name":"Mauritius","id":"MUS"},{"name":"Maldives","id":"MDV"},{"name":"Malawi","id":"MWI"},{"name":"Mexico","id":"MEX"},{"name":"Malaysia","id":"MYS"},{"name":"Mozambique","id":"MOZ"},{"name":"Namibia","id":"NAM"},{"name":"New Caledonia","id":"NCL"},{"name":"Niger","id":"NER"},{"name":"Norfolk Island","id":"NFK"},{"name":"Nigeria","id":"NGA"},{"name":"Nicaragua","id":"NIC"},{"name":"Netherlands","id":"NLD"},{"name":"Norway","id":"NOR"},{"name":"Nepal","id":"NPL"},{"name":"Nauru","id":"NRU"},{"name":"Niue","id":"NIU"},{"name":"New Zealand","id":"NZL"},{"name":"Oman","id":"OMN"},{"name":"Panama","id":"PAN"},{"name":"Peru","id":"PER"},{"name":"French Polynesia","id":"PYF"},{"name":"Papua New Guinea","id":"PNG"},{"name":"Philippines","id":"PHL"},{"name":"Pakistan","id":"PAK"},{"name":"Poland","id":"POL"},{"name":"Saint Pierre and Miquelon","id":"SPM"},{"name":"Pitcairn","id":"PCN"},{"name":"Puerto Rico","id":"PRI"},{"name":"Palestine, State of","id":"PSE"},{"name":"Portugal","id":"PRT"},{"name":"Palau","id":"PLW"},{"name":"Paraguay","id":"PRY"},{"name":"Qatar","id":"QAT"},{"name":"Réunion","id":"REU"},{"name":"Romania","id":"ROU"},{"name":"Serbia","id":"SRB"},{"name":"Russian Federation","id":"RUS"},{"name":"Rwanda","id":"RWA"},{"name":"Saudi Arabia","id":"SAU"},{"name":"Solomon Islands","id":"SLB"},{"name":"Seychelles","id":"SYC"},{"name":"Sudan","id":"SDN"},{"name":"Sweden","id":"SWE"},{"name":"Singapore","id":"SGP"},{"name":"Saint Helena, Ascension and Tristan da Cunha","id":"SHN"},{"name":"Slovenia","id":"SVN"},{"name":"Svalbard and Jan Mayen","id":"SJM"},{"name":"Slovakia","id":"SVK"},{"name":"Sierra Leone","id":"SLE"},{"name":"San Marino","id":"SMR"},{"name":"Senegal","id":"SEN"},{"name":"Somalia","id":"SOM"},{"name":"Suriname","id":"SUR"},{"name":"South Sudan","id":"SSD"},{"name":"Sao Tome and Principe","id":"STP"},{"name":"El Salvador","id":"SLV"},{"name":"Sint Maarten (Dutch part)","id":"SXM"},{"name":"Syrian Arab Republic","id":"SYR"},{"name":"Swaziland","id":"SWZ"},{"name":"Turks and Caicos Islands","id":"TCA"},{"name":"Chad","id":"TCD"},{"name":"French Southern Territories","id":"ATF"},{"name":"Togo","id":"TGO"},{"name":"Thailand","id":"THA"},{"name":"Tajikistan","id":"TJK"},{"name":"Tokelau","id":"TKL"},{"name":"Timor-Leste","id":"TLS"},{"name":"Turkmenistan","id":"TKM"},{"name":"Tunisia","id":"TUN"},{"name":"Tonga","id":"TON"},{"name":"Turkey","id":"TUR"},{"name":"Trinidad and Tobago","id":"TTO"},{"name":"Tuvalu","id":"TUV"},{"name":"Taiwan","id":"TWN"},{"name":"Tanzania, United Republic of","id":"TZA"},{"name":"Ukraine","id":"UKR"},{"name":"Uganda","id":"UGA"},{"name":"United States Minor Outlying Islands","id":"UMI"},{"name":"Uruguay","id":"URY"},{"name":"Uzbekistan","id":"UZB"},{"name":"Holy See (Vatican City State)","id":"VAT"},{"name":"Saint Vincent and the Grenadines","id":"VCT"},{"name":"Venezuela, Bolivarian Republic of","id":"VEN"},{"name":"Virgin Islands, British","id":"VGB"},{"name":"Virgin Islands, U.S.","id":"VIR"},{"name":"Viet Nam","id":"VNM"},{"name":"Vanuatu","id":"VUT"},{"name":"Wallis and Futuna","id":"WLF"},{"name":"Samoa","id":"WSM"},{"name":"Yemen","id":"YEM"},{"name":"Mayotte","id":"MYT"},{"name":"South Africa","id":"ZAF"},{"name":"Zambia","id":"ZMB"},{"name":"Zimbabwe","id":"ZWE"}]
+      window.epick.languages = [{"name":"German","id":"deu"},{"name":"English","id":"eng"},{"name":"French","id":"fra"},{"name":"Spanish","id":"spa"},{"name":"Korean","id":"kor"},{"name":"Russian","id":"rus"},{"name":"Chinese","id":"zho"},{"name":"Afrikaans","id":"afr"},{"name":"Arabic","id":"ara"},{"name":"Bengali","id":"ben"},{"name":"Tibetan","id":"bod"},{"name":"Bulgarian","id":"bul"},{"name":"Catalan","id":"cat"},{"name":"Czech","id":"ces"},{"name":"Welsh","id":"cym"},{"name":"Danish","id":"dan"},{"name":"Modern Greek (1453-)","id":"ell"},{"name":"Estonian","id":"est"},{"name":"Basque","id":"eus"},{"name":"Persian","id":"fas"},{"name":"Fijian","id":"fij"},{"name":"Finnish","id":"fin"},{"name":"Irish","id":"gle"},{"name":"Gujarati","id":"guj"},{"name":"Hebrew","id":"heb"},{"name":"Hindi","id":"hin"},{"name":"Croatian","id":"hrv"},{"name":"Hungarian","id":"hun"},{"name":"Armenian","id":"hye"},{"name":"Indonesian","id":"ind"},{"name":"Icelandic","id":"isl"},{"name":"Italian","id":"ita"},{"name":"Japanese","id":"jpn"},{"name":"Georgian","id":"kat"},{"name":"Central Khmer","id":"khm"},{"name":"Latin","id":"lat"},{"name":"Latvian","id":"lav"},{"name":"Lithuanian","id":"lit"},{"name":"Malayalam","id":"mal"},{"name":"Marathi","id":"mar"},{"name":"Macedonian","id":"mkd"},{"name":"Maltese","id":"mlt"},{"name":"Mongolian","id":"mon"},{"name":"Maori","id":"mri"},{"name":"Malay","id":"msa"},{"name":"Nepali","id":"nep"},{"name":"Dutch","id":"nld"},{"name":"Norwegian","id":"nor"},{"name":"Panjabi","id":"pan"},{"name":"Polish","id":"pol"},{"name":"Portuguese","id":"por"},{"name":"Quechua","id":"que"},{"name":"Romanian","id":"ron"},{"name":"Slovak","id":"slk"},{"name":"Slovenian","id":"slv"},{"name":"Samoan","id":"smo"},{"name":"Albanian","id":"sqi"},{"name":"Serbian","id":"srp"},{"name":"Swahili","id":"swa"},{"name":"Swedish","id":"swe"},{"name":"Tamil","id":"tam"},{"name":"Tatar","id":"tat"},{"name":"Telugu","id":"tel"},{"name":"Thai","id":"tha"},{"name":"Tonga (Tonga Islands)","id":"ton"},{"name":"Turkish","id":"tur"},{"name":"Ukrainian","id":"ukr"},{"name":"Urdu","id":"urd"},{"name":"Uzbek","id":"uzb"},{"name":"Vietnamese","id":"vie"},{"name":"Xhosa","id":"xho"}]
     </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/javascripts/all-91be72bd.js"></script>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/lib/angular.min-bca89dee.js"></script>
+    <script src="/javascripts/lib/angular-cookies-e5ae4c9f.js"></script>
+    <script src="/javascripts/lib/angular-sanitize.min-edd57171.js"></script>
+    <script src="/javascripts/lib/select.min-7b0052b5.js"></script>
+    <script src="/javascripts/lib/loading-bar.min-2fedf772.js"></script>
+    <script src="/javascripts/all-66408fa4.js"></script>
+    <script src="/javascripts/directives-7b6a4b77.js"></script>
+    <script src="/javascripts/nav-39bf7589.js"></script>
     
 
   </head>
@@ -45,7 +76,7 @@
   <body class="recover recover_index">
 
     
-    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XXXX"
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MF65QS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -55,34 +86,43 @@
     
 
     <div class="main-wrapper">
-      <div class="topbar-wrapper">
-      	<div class="menu-toggle h-float--left">
-      		<span class="menu-toggle__bar"></span>
-      		<span class="menu-toggle__bar menu-toggle__bar--second"></span>
-      		<span class="menu-toggle__bar menu-toggle__bar--third"></span>
-      	</div>
+      <div ng-controller="NavController">
+        <div class="topbar-wrapper">
+        	<div class="menu-toggle h-float--left">
+        		<span class="menu-toggle__bar"></span>
+        		<span class="menu-toggle__bar menu-toggle__bar--second"></span>
+        		<span class="menu-toggle__bar menu-toggle__bar--third"></span>
+        	</div>
 
-      	<a href="/" class="branding h-float--left">
-      		<img class="branding__logo" src="/images/epick-logo--color.svg" alt="EPICK.GG logo">
-      	</a>
+        	<a href="/" class="branding h-float--left">
+            <img src="/images/epick-logo--color.svg" class="branding__logo" alt="EPICK.GG logo" />
+        	</a>
 
-          <ul class="nav">
-  <!-- <li class="nav__item"><a class="link link--nav" href="/login/">Login</a></li> -->
-	<li class="nav__item"><a href="/create-profile/" class="h-button">Create profile</a></li>
+            <ul class="nav" ng-hide="loggedIn">
+  <li class="nav__item"><a class="link link--nav" href="/login">Login</a></li>
+	<li class="nav__item"><a class="h-button" href="/create-profile">Create profile</a></li>
 </ul>
-      </div>
 
-      <div class="menu-wrapper">
+<ul class="nav" ng-show="loggedIn">
+  <li class="nav__item">
+    <a class="link link--nav" ng-click="logout()" href="javascript:void(0)">Logout</a>
+  </li>
+	<li class="nav__item"><a class="h-button" href="/edit-profile" >Edit profile</a></li>
+</ul>
+        </div>
+
+        <div class="menu-wrapper">
 	<div class="menu-overlay"></div>
 	<div class="menu">
-    <!-- <div class="menu-header">
-      <span class="menu-header__item menu-header__avatar h-float--left" style="background-image: url(/images/avatar-placeholder.png)">
+    <div class="menu-header" ng-show="loggedIn">
+      <span class="menu-header__item menu-header__avatar h-float--left" 
+            style="background-image: url('/images/heroes/{{currentUser.avatar_id}}@2x.png')">
       </span>
       <div class="menu-header__item menu-header__data h-float--left">
         <label class="menu-header__data-label">Battletag</label>
-        <h2 class="menu-header__data-username">coolbunny #140675467678976547</h2>
+        <h2 class="menu-header__data-username">{{currentUser.battle_tag}}</h2>
       </div>
-    </div> -->
+    </div>
 		<ul class="menu-links">
 			<li class="menu-links__item">
 				<a class="menu-links__item-link" href="/">
@@ -90,12 +130,12 @@
 					<p class="menu-links__item-link-text h-float--left">Home</p>
 				</a>
 			</li>
-      <!-- <li class="menu-links__item">
+      <li class="menu-links__item" ng-show="loggedIn">
         <a class="menu-links__item-link" href="/profile/">
           <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
           <p class="menu-links__item-link-text h-float--left">Profile</p>
         </a>
-      </li> -->
+      </li>
 			<li class="menu-links__item">
 				<a class="menu-links__item-link" href="#">
 					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
@@ -108,29 +148,30 @@
 					<p class="menu-links__item-link-text h-float--left">Privacy Policy</p>
 				</a>
 			</li>
+      <!-- <li class="menu-links__item">
+        <a class="menu-links__item-link" href="/terms/">
+          <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+          <p class="menu-links__item-link-text h-float--left">Terms and Conditions</p>
+        </a>
+      </li> -->
 			<li class="menu-links__item">
-				<a class="menu-links__item-link" href="/terms/">
+				<a class="menu-links__item-link" href="/legal-notice/">
 					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
-					<p class="menu-links__item-link-text h-float--left">Terms and Conditions</p>
-				</a>
-			</li>
-			<li class="menu-links__item">
-				<a class="menu-links__item-link" href="/impressum/">
-					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
-					<p class="menu-links__item-link-text h-float--left">Impressum</p>
+					<p class="menu-links__item-link-text h-float--left">Legal notice</p>
 				</a>
 			</li>
 		</ul>
-		<!-- <ul class="menu-links menu-links--signout">
+    <ul class="menu-links menu-links--signout" ng-show="loggedIn">
       <li class="menu-links__item">
-        <a class="menu-links__item-link" href="#">
-          <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+        <a class="menu-links__item-link" href="javascript:void(0)" ng-click="logout()">
+          <img src="/images/menu__profile-icon.svg" alt="" class="menu-links__item-link-icon h-float--left" />
           <p class="menu-links__item-link-text h-float--left">Sign Out</p>
         </a>
       </li>
-    </ul> -->
+    </ul>
 	</div>
 </div>
+      </div>
 
       <div class="form-wrapper">
 	<div class="form-holder">
@@ -165,7 +206,7 @@
     <div class="footer-wrapper">
 	<ul class="nav nav--left">
 		<li class="nav__item"><a href="/login/" class="link link--footer">Login</a></li>
-		<li class="nav__item"><a href="/impressum/" class="link link--footer">Impressum</a></li>
+		<li class="nav__item"><a href="/legal-notice/" class="link link--footer">Legal notice</a></li>
 		<li class="nav__item"><a href="/contacts/" class="link link--footer">Contacts</a></li>
 	</ul>
 	<a href="/" class="branding branding--footer">

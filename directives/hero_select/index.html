@@ -1,0 +1,47 @@
+<a href="javascript:void(0);"
+   class="{{triggerClass}}"
+   ng-click="open()">{{triggerLabel}}</a>
+
+<div class="overlay__bg avatar-overlay__bg" ng-show="visible" ng-class="{'is-open': visible}">
+	<div class="overlay-content avatar-overlay">
+		<span class="overlay-close" ng-click="hide()">
+      <img class="overlay-close__img" src="/images/close-cross.svg" alt="close overlay">
+    </span>
+    
+		<ul class="heroes-list">
+
+			<li class="heroes-list__item heroes-list__item--first">
+				<div class="heroes-label--first">
+					<h2 class="heroes-list__title">Overwatch<br> Heroes</h2>
+					<p class="heroes-list__desc" ng-if="helpCopy">{{helpCopy}}</p>
+				</div>
+			</li>
+
+      <li ng-repeat="hero in heroes | filter:heroFilter" 
+          class="heroes-list__item">
+      	<input id="hero_{{hero.id}}" 
+               class="heroes-input__checkbox" 
+               type="checkbox" 
+               name="hero" 
+               ng-class="{'checked': selected(hero.id)}">
+      	<label for="hero_{{hero.id}}" class="heroes-label" ng-click="select(hero.id)">
+      		<div class="heroes-label-img">
+      			<img class="heroes-label-img__img" 
+                 ng-src="/images/heroes/{{hero.id}}@2x.png" 
+                 alt="{{hero.name}}">
+      		</div>
+      		<p class="heroes-label__tag">{{hero.name}}</p>
+      	</label>
+      </li>
+		
+			<div class="h-clear"></div>
+		</ul>
+		<span class="overlay-button-holder">
+      <a href="javascript:void(0);" 
+         class="h-button h-button--yellow overlay-button" 
+         ng-click="hide()">
+        Done
+      </a>
+    </span>
+	</div>
+</div>

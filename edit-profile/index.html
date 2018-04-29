@@ -24,7 +24,7 @@
     <meta name="theme-color" content="#1e1727">
     <meta property="fb:app_id" content="466308243563271">
     
-      <title>Create Profile - EPICK.GG</title>
+      <title>Edit Profile - EPICK.GG</title>
       
       <meta property="og:url" content="https://epick.gg/" />
       <meta property="og:type" content="product" />
@@ -69,11 +69,11 @@
     <script src="/javascripts/all-66408fa4.js"></script>
     <script src="/javascripts/directives-7b6a4b77.js"></script>
     <script src="/javascripts/nav-39bf7589.js"></script>
-    <script src="/javascripts/create-profile-86614503.js"></script>
+    <script src="/javascripts/edit-profile-05b450ea.js"></script>
 
   </head>
 
-  <body class="create-profile create-profile_index">
+  <body class="edit-profile edit-profile_index">
 
     
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MF65QS"
@@ -98,6 +98,17 @@
             <img src="/images/epick-logo--color.svg" class="branding__logo" alt="EPICK.GG logo" />
         	</a>
 
+            <ul class="nav" ng-hide="loggedIn">
+  <li class="nav__item"><a class="link link--nav" href="/login">Login</a></li>
+	<li class="nav__item"><a class="h-button" href="/create-profile">Create profile</a></li>
+</ul>
+
+<ul class="nav" ng-show="loggedIn">
+  <li class="nav__item">
+    <a class="link link--nav" ng-click="logout()" href="javascript:void(0)">Logout</a>
+  </li>
+	<li class="nav__item"><a class="h-button" href="/edit-profile" >Edit profile</a></li>
+</ul>
         </div>
 
         <div class="menu-wrapper">
@@ -162,13 +173,12 @@
 </div>
       </div>
 
-      <div ng-controller="CreateProfileController">  
-  <div class="form-wrapper" ng-show="step == 1">
-  	<h1 class="form-wrapper--title h-float--left">Create Profile</h1>
-  	<h2 class="form-wrapper--page h-float h-float--right">1 of 2</h2>
-  	<div class="h-clear"></div>
-  
-  	<form class="form" name="form" novalidate>
+      <div class="form-wrapper" ng-controller="EditProfileController">
+	<h1 class="form-wrapper--title h-float--left">Edit your profile</h1>
+	<div class="h-clear"></div>
+
+  <div ng-hide="success">
+    <form class="form" name="form" novalidate>
 
 	<div class="input-holder">
 		<div class="avatar-box input-holder__box">
@@ -455,41 +465,9 @@
 
 </form>
   </div>
-  
-  <div class="form-wrapper" ng-show="step == 2">
-  	<div class="form-holder" ng-hide="success">
-  		<h1 class="form-wrapper--title h-float--left">Create Account</h1>
-  		<h2 class="form-wrapper--page h-float h-float--right">2 of 2</h2>
-  		<div class="h-clear"></div>
-  		<form name="account_form" class="form" role="POST">
-  			<div class="input-holder">
-  				<h4 class="input__title input__title--white">Email Address</h4>
-  				<input type="email" class="input input--text" placeholder="example@email.com" required="" ng-model="profile.email">
-          
-      		<div class="error-message" ng-show="email_exists">
-      			<h4 class="error-message__title error-message__title--red">This email exists</h4>
-      			<p class="error-message__desc">Please enter a unique email address.</p>
-      		</div>
-  			</div>
-  			<div class="input-holder">
-  				<h4 class="input__title input__title--white">Password</h4>
-  				<input type="password" class="input input--text" placeholder="Type a password" required="" ng-minlength="6" ng-model="profile.password">
-  			</div>
-  			<div class="input-holder">
-  				<h4 class="input__title input__title--white">Confirm Password</h4>
-  				<input type="password" class="input input--text" placeholder="Retype your pasword" required="" ng-minlength="6" ng-model="profile.password_confirmation">
-  			</div>
+</div>  
 
-  			<div class="input-holder">
-  				<input type="submit" class="input input--submit h-button h-button--yellow" value="Create it" ng-click="save()">
-  				
-  			</div>
-  		</form>
-  	</div>
-    
-  </div>
-  
-</div>
+
     </div>
 
     <div class="footer-wrapper">

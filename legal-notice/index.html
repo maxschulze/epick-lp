@@ -24,7 +24,7 @@
     <meta name="theme-color" content="#1e1727">
     <meta property="fb:app_id" content="466308243563271">
     
-      <title>Create Profile - EPICK.GG</title>
+      <title>Legal notice - EPICK.GG</title>
       
       <meta property="og:url" content="https://epick.gg/" />
       <meta property="og:type" content="product" />
@@ -69,11 +69,11 @@
     <script src="/javascripts/all-66408fa4.js"></script>
     <script src="/javascripts/directives-7b6a4b77.js"></script>
     <script src="/javascripts/nav-39bf7589.js"></script>
-    <script src="/javascripts/create-profile-86614503.js"></script>
+    
 
   </head>
 
-  <body class="create-profile create-profile_index">
+  <body class="legal-notice legal-notice_index">
 
     
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MF65QS"
@@ -98,6 +98,17 @@
             <img src="/images/epick-logo--color.svg" class="branding__logo" alt="EPICK.GG logo" />
         	</a>
 
+            <ul class="nav" ng-hide="loggedIn">
+  <li class="nav__item"><a class="link link--nav" href="/login">Login</a></li>
+	<li class="nav__item"><a class="h-button" href="/create-profile">Create profile</a></li>
+</ul>
+
+<ul class="nav" ng-show="loggedIn">
+  <li class="nav__item">
+    <a class="link link--nav" ng-click="logout()" href="javascript:void(0)">Logout</a>
+  </li>
+	<li class="nav__item"><a class="h-button" href="/edit-profile" >Edit profile</a></li>
+</ul>
         </div>
 
         <div class="menu-wrapper">
@@ -162,334 +173,24 @@
 </div>
       </div>
 
-      <div ng-controller="CreateProfileController">  
-  <div class="form-wrapper" ng-show="step == 1">
-  	<h1 class="form-wrapper--title h-float--left">Create Profile</h1>
-  	<h2 class="form-wrapper--page h-float h-float--right">1 of 2</h2>
-  	<div class="h-clear"></div>
-  
-  	<form class="form" name="form" novalidate>
-
-	<div class="input-holder">
-		<div class="avatar-box input-holder__box">
-			<div class="avatar-box__img h-float--left" ng-style="avatarStyle"></div>
-    
-			<div class="avatar-box__content h-float--left">
-				<h4 class="input__title input__title--yellow">Profile Picture</h4>
-				<p class="input__desc">Select your favorite hero as your personal avatar.</p>
-        <ep-hero-select help-copy="Select a hero as your avatar"
-                        selected-hero="profile.avatar_id" multiple="false"
-                        close-after-select="true"
-                        trigger-label="Select Avatar"
-                        trigger-class="h-button h-button--narrow h-button--rounded h-button--shadow-yellow h-button--no-skew"></ep-hero-select>
-			</div>
-		</div> 
-	</div>
-
-  <div class="input-holder input-holder__box">
-    <h4 class="input__title input__title--white">On which platform do you play?</h4>
-    <div class="console-holder">
-      
-      
-        <label ng-click="profile.platform = 'ps'" 
-               for="platform_ps" 
-               class="console-label console-label--first h-float--left">
-          <input id="platform_ps" class="console__input input__radio" type="radio" name="platform" ng-checked="profile.platform == 'ps'">
-          <img src="/images/ps-white.png" alt="Ps white" class="console-label__image" />
-          <p class="console-label__tag">PS4</p>
-          <div class="h-clear"></div>
-        </label>
-        
-      
-        <label ng-click="profile.platform = 'xbox'" 
-               for="platform_xbox" 
-               class="console-label  h-float--left">
-          <input id="platform_xbox" class="console__input input__radio" type="radio" name="platform" ng-checked="profile.platform == 'xbox'">
-          <img src="/images/xbox-white.png" alt="Xbox white" class="console-label__image" />
-          <p class="console-label__tag">XBOX</p>
-          <div class="h-clear"></div>
-        </label>
-        
-      
-        <label ng-click="profile.platform = 'pc'" 
-               for="platform_pc" 
-               class="console-label  h-float--left">
-          <input id="platform_pc" class="console__input input__radio" type="radio" name="platform" ng-checked="profile.platform == 'pc'">
-          <img src="/images/pc-white.png" alt="Pc white" class="console-label__image" />
-          <p class="console-label__tag">PC</p>
-          <div class="h-clear"></div>
-        </label>
-        
-      
-      <div class="h-clear"></div>
-    </div>
-  </div>
-
-	<div class="input-holder">
-		<h4 class="input__title input__title--white" 
-        ng-if="!profile.platform || profile.platform ==  'pc'">Battletag</h4>
-		<h4 class="input__title input__title--white" 
-        ng-if="profile.platform ==  'ps'">PSN handle</h4>
-		<h4 class="input__title input__title--white" 
-        ng-if="profile.platform ==  'xbox'">Gamertag</h4>
-        
-		<input tabindex="1" type="text" name="battletag" ng-model="profile.battle_tag" required="" ng-minlength="3" class="input input--text" placeholder="e.g. JohnDoe#1234" ng-if="!profile.platform || profile.platform == 'pc'">
-    <input tabindex="1" type="text" name="battletag" ng-model="profile.battle_tag" required="" ng-minlength="3" class="input input--text" placeholder="e.g. AgentSmith4589" ng-if="profile.platform == 'xbox'">
-    <input tabindex="1" type="text" name="battletag" ng-model="profile.battle_tag" required="" ng-minlength="3" class="input input--text" placeholder="e.g. raging_bull_ben" ng-if="profile.platform == 'ps'">
-  
-		<div class="error-message" ng-show="(form.$submitted || form.battletag.$touched) && form.battletag.$invalid">
-			<h4 class="error-message__title error-message__title--red" ng-if="!profile.platform || profile.platform == 'pc'">Please enter a valid battletag</h4>
-			<h4 class="error-message__title error-message__title--red" ng-if="profile.platform == 'ps'">Please enter a valid PSN handle/id</h4>
-			<h4 class="error-message__title error-message__title--red" ng-if="profile.platform == 'xbox'">Please enter a valid XBOX gamertag</h4>
-			<p class="error-message__desc" ng-if="!profile.platform || profile.platform == 'pc'">Overwatch® battletags consist of your ingame nickname plus your unique handle, i.e. MaxSchulze#1234</p>
-      <p class="error-message__desc" ng-if="profile.platform == 'ps'">Your PSN handle should look like this: raging_bull_ben</p>
-      <p class="error-message__desc" ng-if="profile.platform == 'xbox'">Your XBOX gamertag should look like this: AgentSmith4589</p>
-		</div>
-    
-		<div class="error-message" ng-show="battle_tag_exists">
-			<h4 class="error-message__title error-message__title--red" ng-if="!profile.platform || profile.platform == 'pc'">This battletag exists</h4>
-			<h4 class="error-message__title error-message__title--red" ng-if="profile.platform == 'xbox'">This gamertag exists</h4>
-			<h4 class="error-message__title error-message__title--red" ng-if="profile.platform == 'ps'">This PSN handle exists</h4>
-			<p class="error-message__desc" ng-if="!profile.platform || profile.platform == 'pc'">Please enter a unique Overwatch® battletag, i.e. MaxSchulze#1234</p>
-      <p class="error-message__desc" ng-if="profile.platform == 'ps'">Please enter a unique PSN handle, i.e. raging_bull_ben</p>
-      <p class="error-message__desc" ng-if="profile.platform == 'xbox'">Please enter a unique XBOX gamertag, i.e. AgentSmith4589</p>
-		</div>
-	</div>
-
-	<div class="input-holder">
-		<h4 class="input__title input__title--white">Your region</h4>
-    
-    <ui-select tabindex="2" autofocus theme="selectize" ng-model="region.selected" style="width: 100%" title="Select your region" search-enabled="false">
-      <ui-select-match placeholder="Select your region">{{$select.selected.name}}</ui-select-match>
-      <ui-select-choices repeat="region in regions">
-        <span ng-bind-html="region.name | highlight: $select.search"></span>
-      </ui-select-choices>
-    </ui-select>
-	</div>
-
-	<div class="input-holder">
-		<h4 class="input__title input__title--white">Location</h4>
-    
-    <ui-select tabindex="3" autofocus theme="selectize" ng-model="location.selected" style="width: 100%" title="Select your location" search-enabled="true">
-      <ui-select-match placeholder="Select or search for your location...">{{$select.selected.name}}</ui-select-match>
-      <ui-select-choices repeat="location in locations | filter:{'name': $select.search}">
-        <span ng-bind-html="location.name | highlight: $select.search"></span>
-      </ui-select-choices>
-    </ui-select>
-	</div>
-
-	<div class="input-holder">
-		<h4 class="input__title input__title--white">Language</h4>
-    <ui-select tabindex="4" autofocus theme="selectize" ng-model="language.selected" style="width: 100%" title="Select your language" search-enabled="true">
-      <ui-select-match placeholder="Select or search for your language...">{{$select.selected.name}}</ui-select-match>
-      <ui-select-choices repeat="language in languages | filter:{'name': $select.search}">
-        <span ng-bind-html="language.name | highlight: $select.search"></span>
-      </ui-select-choices>
-    </ui-select>
-	</div>
-
-	<div class="input-holder input-holder--half h-float--left">
-		<h4 class="input__title input__title--white">Ingame Level</h4>
-		<input tabindex="5" type="number" max="999" min="0" class="input input--text" placeholder="(0-999)" name="game_level" ng-model="profile.game_level">
-	</div>
-
-	<div class="input-holder input-holder--half h-float--right">
-		<h4 class="input__title input__title--white">Ranked <!-- Ingame --> Level</h4>
-		<input tabindex="6" type="number" max="5000" min="0" class="input input--text" placeholder="(0-5000)" name="ranked_game_level" ng-model="profile.ranked_game_level">
-	</div>
-
-	<div class="h-clear"></div>
-
-	<div class="input-holder input-holder--half h-float--left">
-		<h4 class="input__title input__title--white">Age</h4>
-		
-    <ui-select tabindex="7" autofocus theme="selectize" ng-model="age.selected" style="width: 100%" title="Your age" search-enabled="false">
-      <ui-select-match placeholder="Your age">{{$select.selected.name}}</ui-select-match>
-      <ui-select-choices repeat="age in ages | filter:{'name': $select.search}">
-        <span ng-bind-html="age.name | highlight: $select.search"></span>
-      </ui-select-choices>
-    </ui-select>
-	</div>
-
-	<div class="input-holder input-holder--half h-float--right">
-		<h4 class="input__title input__title--white">Gender</h4>
-    
-    <ui-select theme="selectize" tabindex="8" autofocus ng-model="gender.selected" style="width: 100%" title="Your gender" search-enabled="false">
-      <ui-select-match placeholder="Your gender">{{$select.selected.name}}</ui-select-match>
-      <ui-select-choices repeat="gender in genders | filter:{'name': $select.search}">
-        <span ng-bind-html="gender.name | highlight: $select.search"></span>
-      </ui-select-choices>
-    </ui-select>
-	</div>
-
-	<div class="h-clear"></div>
-
-	<div class="input-holder inoput-holder--role">
-		<div class="input-holder__box">
-			<h4 class="input__title input__title--yellow">Favorite Role</h4>
-			<p class="input__desc">Select your favorite<br> role in Overwatch®</p>
-
-			<div class="role-label-wrapper" tabindex="9">
-          <input id="role_offense" class="input__radio" 
-                 type="radio" name="favorite_role" value="offense" ng-model="profile.favorite_role">
-					<label for="role_offense" class="role-label role-label--first h-float--left">
-						<div class="role-label-img">
-							<img src="/images/roles/role-offense.png" class="role-label-img__img" alt="touch label icons" />
-						</div>
-						<p class="role-label__tag">Offense</p>
-					</label>
-          <input id="role_defense" class="input__radio" 
-                 type="radio" name="favorite_role" value="defense" ng-model="profile.favorite_role">
-					<label for="role_defense" class="role-label role-label--first h-float--left">
-						<div class="role-label-img">
-							<img src="/images/roles/role-defense.png" class="role-label-img__img" alt="touch label icons" />
-						</div>
-						<p class="role-label__tag">Defense</p>
-					</label>
-          <input id="role_tank" class="input__radio" 
-                 type="radio" name="favorite_role" value="tank" ng-model="profile.favorite_role">
-					<label for="role_tank" class="role-label role-label--first h-float--left">
-						<div class="role-label-img">
-							<img src="/images/roles/role-tank.png" class="role-label-img__img" alt="touch label icons" />
-						</div>
-						<p class="role-label__tag">Tank</p>
-					</label>
-          <input id="role_support" class="input__radio" 
-                 type="radio" name="favorite_role" value="support" ng-model="profile.favorite_role">
-					<label for="role_support" class="role-label role-label--first h-float--left">
-						<div class="role-label-img">
-							<img src="/images/roles/role-support.png" class="role-label-img__img" alt="touch label icons" />
-						</div>
-						<p class="role-label__tag">Support</p>
-					</label>
-			
-				<div class="h-clear"></div>
-			</div>
-		</div>
-	</div>
-
-	<div class="input-holder input-holder--heroes">
-		<div class="input-holder__box">
-			<h4 class="input__title input__title--yellow">Favorite Heroes</h4>
-			<p class="input__desc">Select your favorite heroes in Overwatch®</p>
-      
-      <span class="input__desc" ng-hide="profile.favorite_role"><em>Please select your favorite role first!</em></span>
-      
-			<ep-hero-select help-copy="Select your favorite heroes."
-                      selected-heroes="profile.selected_heros" multiple="true"
-                      hero-filter="heroFilter"
-                      close-after-select="false"
-                      ng-show="profile.favorite_role"
-                      trigger-label="Select Heroes"
-                      trigger-class="h-button h-button--white h-button--narrow h-button--rounded h-button--shadow-white h-button--no-skew"></ep-hero-select>
-		</div>
-	</div>
-
-	<div class="input-holder">
-		<div class="input-holder__box input-holder__box--questions">
-			<ul class="question-wrapper">
-				<li class="question question--first">
-					<input id="voice-chat" class="input__checkbox" type="checkbox" 
-                 name="use_voice_chat" ng-model="profile.use_voice_chat" tabindex="11" ng-checked="profile.use_voice_chat || profile.use_voice_chat == '1'">
-					<label for="voice-chat" class="question-touch">
-						<p class="question-touch__text">Do you use voice chat?</p>
-					</label>
-					<label for="voice-chat" class="question-checkbox"></label>
-				</li>
-				<li class="question">
-					<input id="join-team" class="input__checkbox" type="checkbox" tabindex="12"
-                 name="looking_for_compatible_team" ng-model="profile.looking_for_compatible_team"
-                 ng-checked="profile.looking_for_compatible_team || profile.looking_for_compatible_team == '1'">
-					<label for="join-team" class="question-touch">
-						<p class="question-touch__text">Looking to join a compatible team to play with?</p>
-					</label>
-					<label for="join-team" class="question-checkbox"></label>
-				</li>
-				<li class="question">
-					<input id="build-team" class="input__checkbox" type="checkbox" tabindex="13"
-                 name="looking_to_build_ranked_team" ng-model="profile.looking_to_build_ranked_team"
-                 ng-checked="profile.looking_to_build_ranked_team || profile.looking_to_build_ranked_team == '1'">
-					<label for="build-team" class="question-touch">
-						<p class="question-touch__text">Looking to build your own ranked team?</p>
-					</label>
-					<label for="build-team" class="question-checkbox"></label>
-				</li>
-				<li class="question question--last">
-					<input id="search-team" class="input__checkbox" type="checkbox" tabindex="14"
-                 name="looking_for_ranked_team" ng-model="profile.looking_for_ranked_team"
-                 ng-checked="profile.looking_for_ranked_team || profile.looking_for_ranked_team == '1'">
-					<label for="search-team" class="question-touch">
-						<p class="question-touch__text">Looking for a team to play ranked mode?</p>
-					</label>
-					<label for="search-team" class="question-checkbox"></label>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="input-holder">
-		<h4 class="input__title input__title--white">How much time do you spend gaming each week?</h4>
-		
-    <ui-select theme="selectize" tabindex="15" autofocus ng-model="game_time.selected" style="width: 100%" title="Select a time range" search-enabled="false">
-      <ui-select-match placeholder="Select a time range">{{$select.selected.name}}</ui-select-match>
-      <ui-select-choices repeat="game_time in game_times | filter:{'name': $select.search}">
-        <span ng-bind-html="game_time.name | highlight: $select.search"></span>
-      </ui-select-choices>
-    </ui-select>
-		</select>
-	</div>
-
-	<div class="input-holder">
-		<h4 class="input__title input__title--white">
-      Link to your highlight clip (youtube, facebook, instagram)
-    </h4>
-		<input type="url" class="input input--text" 
-           placeholder="https://youtu.be/..." name="highlight_clip_url" tabindex="16"
-          ng-model="profile.highlight_clip_url">
-	</div>
-
-	<div class="input-holder">
-		<input type="submit" class="input input--submit h-button h-button--yellow" 
-           value="{{submit_label}}" ng-click="next()" tabindex="17">
-	</div>
-
-</form>
-  </div>
-  
-  <div class="form-wrapper" ng-show="step == 2">
-  	<div class="form-holder" ng-hide="success">
-  		<h1 class="form-wrapper--title h-float--left">Create Account</h1>
-  		<h2 class="form-wrapper--page h-float h-float--right">2 of 2</h2>
-  		<div class="h-clear"></div>
-  		<form name="account_form" class="form" role="POST">
-  			<div class="input-holder">
-  				<h4 class="input__title input__title--white">Email Address</h4>
-  				<input type="email" class="input input--text" placeholder="example@email.com" required="" ng-model="profile.email">
-          
-      		<div class="error-message" ng-show="email_exists">
-      			<h4 class="error-message__title error-message__title--red">This email exists</h4>
-      			<p class="error-message__desc">Please enter a unique email address.</p>
-      		</div>
-  			</div>
-  			<div class="input-holder">
-  				<h4 class="input__title input__title--white">Password</h4>
-  				<input type="password" class="input input--text" placeholder="Type a password" required="" ng-minlength="6" ng-model="profile.password">
-  			</div>
-  			<div class="input-holder">
-  				<h4 class="input__title input__title--white">Confirm Password</h4>
-  				<input type="password" class="input input--text" placeholder="Retype your pasword" required="" ng-minlength="6" ng-model="profile.password_confirmation">
-  			</div>
-
-  			<div class="input-holder">
-  				<input type="submit" class="input input--submit h-button h-button--yellow" value="Create it" ng-click="save()">
-  				
-  			</div>
-  		</form>
-  	</div>
-    
-  </div>
-  
-</div>
+      <section class="content-wrapper">
+	<h1 class="content-wrapper__title">Legal notice (Impressum)</h1>
+	<p class="content-wrapper__text">
+		Woschlab GmbH<br>
+		Colonnaden 51<br>
+		20345 Hamburg, Germany
+	</p>
+	<p class="content-wrapper__text">
+		Telefon: +49 (0) 40 349 61 67-27<br>
+		Fax: +49 (0) 40 349 61 67-29<br>
+		E-Mail: info@woschlab.com 
+	</p>
+	<p class="content-wrapper__text">
+		Register court/Amtsgericht Hamburg, HRB 138798<br>
+		CEO/Geschäftsführer: Georg Ehrmann<br>
+		Responsible for the content/Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV: Georg Ehrmann
+	</p>
+</section>
     </div>
 
     <div class="footer-wrapper">

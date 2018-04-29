@@ -1,0 +1,1 @@
+angular.module("epickApp").controller("NavController",["$scope","$cookies","$window",function(e,o,r){e.currentUser=void 0,sessionStorage.getItem("current_user")&&(e.currentUser=JSON.parse(sessionStorage.getItem("current_user"))),e.loggedIn=void 0!=e.currentUser,e.logout=function(){sessionStorage.clear(),r.location.href="/"}}]).config(function(){});
