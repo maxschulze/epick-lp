@@ -1,0 +1,826 @@
+<!doctype html>
+<html ng-app="createProfile">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title>Create Profile - EPICK.GG</title>
+    <meta name="description" content="The new team building tool for Overwatch" />
+    <meta name="url" content="https://epick.gg/" />
+
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
+    <link href="/stylesheets/site-2714dc4a.css" rel="stylesheet" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#59007c">
+    <meta name="theme-color" content="#1e1727">
+    <meta property="fb:app_id" content="466308243563271">
+    
+      <meta property="og:url" content="https://epick.gg/" />
+      <meta property="og:type" content="product" />
+      <meta property="og:title" content="EPICK.GG" />
+      <meta property="og:description" content="The new team building tool for Overwatch." />
+      <meta property="og:image" content="https://epick.gg/images/have-fun-playing@2x.png" />
+      <meta property="og:site_name" content="EPICK.GG">
+      <meta property="og:locale" content="en_US">
+    
+
+    <script type="text/javascript">
+      window.epick = {};
+      window.epick.heroes = [{"name":"Genji","role":"offense","id":"genji"},{"name":"McCree","role":"offense","id":"mccree"},{"name":"Pharah","role":"offense","id":"pharah"},{"name":"Reaper","role":"offense","id":"reaper"},{"name":"Soldier:76","role":"offense","id":"soldier76"},{"name":"Tracer","role":"offense","id":"tracer"},{"name":"Mei","role":"defense","id":"mei"},{"name":"Bastion","role":"defense","id":"bastion"},{"name":"Hanzo","role":"defense","id":"hanzo"},{"name":"Junkrat","role":"defense","id":"junkrat"},{"name":"Torbjorn","role":"defense","id":"torbjorn"},{"name":"Widowmaker","role":"defense","id":"widowmaker"},{"name":"D.VA","role":"tank","id":"dva"},{"name":"Reinhardt","role":"tank","id":"reinhardt"},{"name":"Roadhog","role":"tank","id":"roadhog"},{"name":"Winston","role":"tank","id":"winston"},{"name":"Zarya","role":"tank","id":"zarya"},{"name":"Ana","role":"support","id":"ana"},{"name":"Lucio","role":"support","id":"lucio"},{"name":"Mercy","role":"support","id":"mercy"},{"name":"Symettra","role":"support","id":"symettra"},{"name":"Zenyatta","role":"support","id":"zenyatta"}];
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/all-91be72bd.js"></script>
+    <script src="/javascripts/create-profile-97528d5d.js"></script>
+
+  </head>
+
+  <body class="create-profile create-profile_index">
+
+    
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MF65QS');</script>
+    
+
+    <div class="main-wrapper">
+      <div class="topbar-wrapper">
+      	<div class="menu-toggle h-float--left">
+      		<span class="menu-toggle__bar"></span>
+      		<span class="menu-toggle__bar menu-toggle__bar--second"></span>
+      		<span class="menu-toggle__bar menu-toggle__bar--third"></span>
+      	</div>
+
+      	<a href="/" class="branding h-float--left">
+      		<img class="branding__logo" src="/images/epick-logo--color.svg" alt="EPICK.GG logo">
+      	</a>
+
+      </div>
+
+      <div class="menu-wrapper">
+	<div class="menu-overlay"></div>
+	<div class="menu">
+    <!-- <div class="menu-header">
+      <span class="menu-header__item menu-header__avatar h-float--left" style="background-image: url(/images/avatar-placeholder.png)">
+      </span>
+      <div class="menu-header__item menu-header__data h-float--left">
+        <label class="menu-header__data-label">Battletag</label>
+        <h2 class="menu-header__data-username">coolbunny #140675467678976547</h2>
+      </div>
+    </div> -->
+		<ul class="menu-links">
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Home</p>
+				</a>
+			</li>
+      <!-- <li class="menu-links__item">
+        <a class="menu-links__item-link" href="/profile/">
+          <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+          <p class="menu-links__item-link-text h-float--left">Profile</p>
+        </a>
+      </li> -->
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="#">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Talk to us on Reddit</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/privacy/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Privacy Policy</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/terms/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Terms and Conditions</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/impressum/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Impressum</p>
+				</a>
+			</li>
+		</ul>
+		<!-- <ul class="menu-links menu-links--signout">
+      <li class="menu-links__item">
+        <a class="menu-links__item-link" href="#">
+          <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+          <p class="menu-links__item-link-text h-float--left">Sign Out</p>
+        </a>
+      </li>
+    </ul> -->
+	</div>
+</div>
+
+      <div ng-controller="CreateProfileController">  
+  <div class="form-wrapper" ng-show="step == 1">
+  	<h1 class="form-wrapper--title h-float--left">Create Profile</h1>
+  	<h2 class="form-wrapper--page h-float h-float--right">1 of 2</h2>
+  	<div class="h-clear"></div>
+  
+  	<form class="form" name="form" novalidate>
+		
+  		<div class="input-holder">
+  			<div class="avatar-box input-holder__box">
+  				<div class="avatar-box__img h-float--left" ng-style="avatarStyle"></div>
+        
+  				<div class="avatar-box__content h-float--left">
+  					<h4 class="input__title input__title--yellow">Profile Picture</h4>
+  					<p class="input__desc">Select your favorite hero as your personal avatar.</p>
+  					<a href="javascript:void(0);" class="h-button h-button--narrow h-button--rounded h-button--shadow-yellow h-button--no-skew" ng-click="selectAvatar()">Select Avatar</a>
+  				</div>
+  			</div> 
+  		</div>
+
+      <div class="input-holder input-holder__box">
+        <h4 class="input__title input__title--white">In which platform do you play?</h4>
+        <div class="console-holder">
+        
+          <label for="ps" class="console-label console-label--first h-float--left">
+            <input id="ps" class="console__input input__radio" type="radio" name="console">
+            <img class="console-label__image" src="/images/ps-white.png" alt="ps icon">
+            <p class="console-label__tag">PS 4</p>
+            <div class="h-clear"></div>
+          </label>
+    
+          <label for="xbox" class="console-label h-float--left">
+            <input id="xbox" class="console__input input__radio" type="radio" name="console">
+            <img class="console-label__image" src="/images/xbox-white.png" alt="xbox icon">
+            <p class="console-label__tag">XBOX</p>
+            <div class="h-clear"></div>
+          </label>
+    
+          <label for="pc" class="console-label console-label--last h-float--left">
+            <input id="pc" class="console__input input__radio" type="radio" name="console">
+            <img class="console-label__image" src="/images/pc-white.png" alt="pc icon">
+            <p class="console-label__tag">PC / MAC</p>
+            <div class="h-clear"></div>
+          </label>
+          <div class="h-clear"></div>
+        </div>
+      </div>
+
+  		<div class="input-holder">
+  			<h4 class="input__title input__title--white">Battletag</h4>
+  			<input tabindex="1" type="text" name="battletag" ng-model="profile.battle_tag" required="" ng-minlength="3" class="input input--text" placeholder="Ingame Nickname + Unique Handle">
+      
+  			<div class="error-message" ng-show="(form.$submitted || form.battletag.$touched) && form.battletag.$invalid">
+  				<h4 class="error-message__title error-message__title--red">Please enter a valid battletag</h4>
+  				<p class="error-message__desc">Overwatch® battletags consist of your ingame nickname plus your unique handle, i.e. MaxSchulze#1234</p>
+  			</div>
+  		</div>
+		
+  		<div class="input-holder">
+  			<h4 class="input__title input__title--white">Battle.net region</h4>
+
+  			<select tabindex="2" class="input input--select" name="region" ng-model="profile.region">
+  				<option value="">Select your region</option>
+        
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="americas">Americas</option>
+            <option value="oceania">Oceania</option>
+  			</select>
+  		</div>
+
+  		<div class="input-holder">
+  			<h4 class="input__title input__title--white">Location</h4>
+      
+  			<select tabindex="3" class="input input--select" name="location" ng-model="profile.location">
+  				<option value="" selected>Select your location</option>
+        
+          
+              <option value="DEU">Germany</option>
+          
+              <option value="USA">United States</option>
+          
+          
+              <option value="FRA">France</option>
+          
+              <option value="ESP">Spain</option>
+          
+              <option value="JPN">Japan</option>
+          
+              <option value="CHN">China</option>
+          
+              <option value="KOR">Korea, Republic of</option>
+        
+          <option value="" disabled selected>---------------</option>
+        
+              <option value="AND">Andorra</option>
+              <option value="ARE">United Arab Emirates</option>
+              <option value="AFG">Afghanistan</option>
+              <option value="ATG">Antigua and Barbuda</option>
+              <option value="AIA">Anguilla</option>
+              <option value="ALB">Albania</option>
+              <option value="ARM">Armenia</option>
+              <option value="ANT"></option>
+              <option value="AGO">Angola</option>
+              <option value="ATA">Antarctica</option>
+              <option value="ARG">Argentina</option>
+              <option value="ASM">American Samoa</option>
+              <option value="AUT">Austria</option>
+              <option value="AUS">Australia</option>
+              <option value="ABW">Aruba</option>
+              <option value="ALA">Åland Islands</option>
+              <option value="AZE">Azerbaijan</option>
+              <option value="BIH">Bosnia and Herzegovina</option>
+              <option value="BRB">Barbados</option>
+              <option value="BGD">Bangladesh</option>
+              <option value="BEL">Belgium</option>
+              <option value="BFA">Burkina Faso</option>
+              <option value="BGR">Bulgaria</option>
+              <option value="BHR">Bahrain</option>
+              <option value="BDI">Burundi</option>
+              <option value="BEN">Benin</option>
+              <option value="BLM">Saint Barthélemy</option>
+              <option value="BMU">Bermuda</option>
+              <option value="BRN">Brunei Darussalam</option>
+              <option value="BOL">Bolivia, Plurinational State of</option>
+              <option value="BES">Bonaire, Sint Eustatius and Saba</option>
+              <option value="BRA">Brazil</option>
+              <option value="BHS">Bahamas</option>
+              <option value="BTN">Bhutan</option>
+              <option value="BVT">Bouvet Island</option>
+              <option value="BWA">Botswana</option>
+              <option value="BLR">Belarus</option>
+              <option value="BLZ">Belize</option>
+              <option value="CAN">Canada</option>
+              <option value="CCK">Cocos (Keeling) Islands</option>
+              <option value="COD">Congo, The Democratic Republic of the</option>
+              <option value="CAF">Central African Republic</option>
+              <option value="COG">Congo</option>
+              <option value="CHE">Switzerland</option>
+              <option value="CIV">Côte d'Ivoire</option>
+              <option value="COK">Cook Islands</option>
+              <option value="CHL">Chile</option>
+              <option value="CMR">Cameroon</option>
+              <option value="COL">Colombia</option>
+              <option value="CRI">Costa Rica</option>
+              <option value="CUB">Cuba</option>
+              <option value="CPV">Cape Verde</option>
+              <option value="CUW">Curaçao</option>
+              <option value="CXR">Christmas Island</option>
+              <option value="CYP">Cyprus</option>
+              <option value="CZE">Czech Republic</option>
+              <option value="DJI">Djibouti</option>
+              <option value="DNK">Denmark</option>
+              <option value="DMA">Dominica</option>
+              <option value="DOM">Dominican Republic</option>
+              <option value="DZA">Algeria</option>
+              <option value="ECU">Ecuador</option>
+              <option value="EST">Estonia</option>
+              <option value="EGY">Egypt</option>
+              <option value="ESH">Western Sahara</option>
+              <option value="ERI">Eritrea</option>
+              <option value="ETH">Ethiopia</option>
+              <option value="FIN">Finland</option>
+              <option value="FJI">Fiji</option>
+              <option value="FLK">Falkland Islands (Malvinas)</option>
+              <option value="FSM">Micronesia, Federated States of</option>
+              <option value="FRO">Faroe Islands</option>
+              <option value="GAB">Gabon</option>
+              <option value="GBR">United Kingdom</option>
+              <option value="GRD">Grenada</option>
+              <option value="GEO">Georgia</option>
+              <option value="GUF">French Guiana</option>
+              <option value="GGY">Guernsey</option>
+              <option value="GHA">Ghana</option>
+              <option value="GIB">Gibraltar</option>
+              <option value="GRL">Greenland</option>
+              <option value="GMB">Gambia</option>
+              <option value="GIN">Guinea</option>
+              <option value="GLP">Guadeloupe</option>
+              <option value="GNQ">Equatorial Guinea</option>
+              <option value="GRC">Greece</option>
+              <option value="SGS">South Georgia and the South Sandwich Islands</option>
+              <option value="GTM">Guatemala</option>
+              <option value="GUM">Guam</option>
+              <option value="GNB">Guinea-Bissau</option>
+              <option value="GUY">Guyana</option>
+              <option value="HKG">Hong Kong</option>
+              <option value="HMD">Heard Island and McDonald Islands</option>
+              <option value="HND">Honduras</option>
+              <option value="HRV">Croatia</option>
+              <option value="HTI">Haiti</option>
+              <option value="HUN">Hungary</option>
+              <option value="IDN">Indonesia</option>
+              <option value="IRL">Ireland</option>
+              <option value="ISR">Israel</option>
+              <option value="IMN">Isle of Man</option>
+              <option value="IND">India</option>
+              <option value="IOT">British Indian Ocean Territory</option>
+              <option value="IRQ">Iraq</option>
+              <option value="IRN">Iran, Islamic Republic of</option>
+              <option value="ISL">Iceland</option>
+              <option value="ITA">Italy</option>
+              <option value="JEY">Jersey</option>
+              <option value="JAM">Jamaica</option>
+              <option value="JOR">Jordan</option>
+              <option value="KEN">Kenya</option>
+              <option value="KGZ">Kyrgyzstan</option>
+              <option value="KHM">Cambodia</option>
+              <option value="KIR">Kiribati</option>
+              <option value="COM">Comoros</option>
+              <option value="KNA">Saint Kitts and Nevis</option>
+              <option value="PRK">Korea, Democratic People's Republic of</option>
+              <option value="KWT">Kuwait</option>
+              <option value="CYM">Cayman Islands</option>
+              <option value="KAZ">Kazakhstan</option>
+              <option value="LAO">Lao People's Democratic Republic</option>
+              <option value="LBN">Lebanon</option>
+              <option value="LCA">Saint Lucia</option>
+              <option value="LIE">Liechtenstein</option>
+              <option value="LKA">Sri Lanka</option>
+              <option value="LBR">Liberia</option>
+              <option value="LSO">Lesotho</option>
+              <option value="LTU">Lithuania</option>
+              <option value="LUX">Luxembourg</option>
+              <option value="LVA">Latvia</option>
+              <option value="LBY">Libya</option>
+              <option value="MAR">Morocco</option>
+              <option value="MCO">Monaco</option>
+              <option value="MDA">Moldova, Republic of</option>
+              <option value="MNE">Montenegro</option>
+              <option value="MAF">Saint Martin (French part)</option>
+              <option value="MDG">Madagascar</option>
+              <option value="MHL">Marshall Islands</option>
+              <option value="MKD">Macedonia, Republic of</option>
+              <option value="MLI">Mali</option>
+              <option value="MMR">Myanmar</option>
+              <option value="MNG">Mongolia</option>
+              <option value="MAC">Macao</option>
+              <option value="MNP">Northern Mariana Islands</option>
+              <option value="MTQ">Martinique</option>
+              <option value="MRT">Mauritania</option>
+              <option value="MSR">Montserrat</option>
+              <option value="MLT">Malta</option>
+              <option value="MUS">Mauritius</option>
+              <option value="MDV">Maldives</option>
+              <option value="MWI">Malawi</option>
+              <option value="MEX">Mexico</option>
+              <option value="MYS">Malaysia</option>
+              <option value="MOZ">Mozambique</option>
+              <option value="NAM">Namibia</option>
+              <option value="NCL">New Caledonia</option>
+              <option value="NER">Niger</option>
+              <option value="NFK">Norfolk Island</option>
+              <option value="NGA">Nigeria</option>
+              <option value="NIC">Nicaragua</option>
+              <option value="NLD">Netherlands</option>
+              <option value="NOR">Norway</option>
+              <option value="NPL">Nepal</option>
+              <option value="NRU">Nauru</option>
+              <option value="NIU">Niue</option>
+              <option value="NZL">New Zealand</option>
+              <option value="OMN">Oman</option>
+              <option value="PAN">Panama</option>
+              <option value="PER">Peru</option>
+              <option value="PYF">French Polynesia</option>
+              <option value="PNG">Papua New Guinea</option>
+              <option value="PHL">Philippines</option>
+              <option value="PAK">Pakistan</option>
+              <option value="POL">Poland</option>
+              <option value="SPM">Saint Pierre and Miquelon</option>
+              <option value="PCN">Pitcairn</option>
+              <option value="PRI">Puerto Rico</option>
+              <option value="PSE">Palestine, State of</option>
+              <option value="PRT">Portugal</option>
+              <option value="PLW">Palau</option>
+              <option value="PRY">Paraguay</option>
+              <option value="QAT">Qatar</option>
+              <option value="REU">Réunion</option>
+              <option value="ROU">Romania</option>
+              <option value="SRB">Serbia</option>
+              <option value="RUS">Russian Federation</option>
+              <option value="RWA">Rwanda</option>
+              <option value="SAU">Saudi Arabia</option>
+              <option value="SLB">Solomon Islands</option>
+              <option value="SYC">Seychelles</option>
+              <option value="SDN">Sudan</option>
+              <option value="SWE">Sweden</option>
+              <option value="SGP">Singapore</option>
+              <option value="SHN">Saint Helena, Ascension and Tristan da Cunha</option>
+              <option value="SVN">Slovenia</option>
+              <option value="SJM">Svalbard and Jan Mayen</option>
+              <option value="SVK">Slovakia</option>
+              <option value="SLE">Sierra Leone</option>
+              <option value="SMR">San Marino</option>
+              <option value="SEN">Senegal</option>
+              <option value="SOM">Somalia</option>
+              <option value="SUR">Suriname</option>
+              <option value="SSD">South Sudan</option>
+              <option value="STP">Sao Tome and Principe</option>
+              <option value="SLV">El Salvador</option>
+              <option value="SXM">Sint Maarten (Dutch part)</option>
+              <option value="SYR">Syrian Arab Republic</option>
+              <option value="SWZ">Swaziland</option>
+              <option value="TCA">Turks and Caicos Islands</option>
+              <option value="TCD">Chad</option>
+              <option value="ATF">French Southern Territories</option>
+              <option value="TGO">Togo</option>
+              <option value="THA">Thailand</option>
+              <option value="TJK">Tajikistan</option>
+              <option value="TKL">Tokelau</option>
+              <option value="TLS">Timor-Leste</option>
+              <option value="TKM">Turkmenistan</option>
+              <option value="TUN">Tunisia</option>
+              <option value="TON">Tonga</option>
+              <option value="TUR">Turkey</option>
+              <option value="TTO">Trinidad and Tobago</option>
+              <option value="TUV">Tuvalu</option>
+              <option value="TWN">Taiwan</option>
+              <option value="TZA">Tanzania, United Republic of</option>
+              <option value="UKR">Ukraine</option>
+              <option value="UGA">Uganda</option>
+              <option value="UMI">United States Minor Outlying Islands</option>
+              <option value="URY">Uruguay</option>
+              <option value="UZB">Uzbekistan</option>
+              <option value="VAT">Holy See (Vatican City State)</option>
+              <option value="VCT">Saint Vincent and the Grenadines</option>
+              <option value="VEN">Venezuela, Bolivarian Republic of</option>
+              <option value="VGB">Virgin Islands, British</option>
+              <option value="VIR">Virgin Islands, U.S.</option>
+              <option value="VNM">Viet Nam</option>
+              <option value="VUT">Vanuatu</option>
+              <option value="WLF">Wallis and Futuna</option>
+              <option value="WSM">Samoa</option>
+              <option value="YEM">Yemen</option>
+              <option value="MYT">Mayotte</option>
+              <option value="ZAF">South Africa</option>
+              <option value="ZMB">Zambia</option>
+              <option value="ZWE">Zimbabwe</option>
+  			</select>
+  		</div>
+
+  		<div class="input-holder">
+  			<h4 class="input__title input__title--white">Language</h4>
+  			<select tabindex="4" class="input input--select" name="language" ng-model="profile.language">
+  				<option value="">Language</option>
+          
+        
+          
+              <option value="deu">German</option>
+          
+              <option value="eng">English</option>
+          
+              <option value="fra">French</option>
+          
+              <option value="spa">Spanish</option>
+          
+              <option value="kor">Korean</option>
+          
+              <option value="rus">Russian</option>
+          
+              <option value="zho">Chinese</option>
+        
+          <option value="" disabled selected>---------------</option>
+        
+              <option value="afr">Afrikaans</option>
+              <option value="ara">Arabic</option>
+              <option value="ben">Bengali</option>
+              <option value="bod">Tibetan</option>
+              <option value="bul">Bulgarian</option>
+              <option value="cat">Catalan</option>
+              <option value="ces">Czech</option>
+              <option value="cym">Welsh</option>
+              <option value="dan">Danish</option>
+              <option value="ell">Modern Greek (1453-)</option>
+              <option value="est">Estonian</option>
+              <option value="eus">Basque</option>
+              <option value="fas">Persian</option>
+              <option value="fij">Fijian</option>
+              <option value="fin">Finnish</option>
+              <option value="gle">Irish</option>
+              <option value="guj">Gujarati</option>
+              <option value="heb">Hebrew</option>
+              <option value="hin">Hindi</option>
+              <option value="hrv">Croatian</option>
+              <option value="hun">Hungarian</option>
+              <option value="hye">Armenian</option>
+              <option value="ind">Indonesian</option>
+              <option value="isl">Icelandic</option>
+              <option value="ita">Italian</option>
+              <option value="jpn">Japanese</option>
+              <option value="kat">Georgian</option>
+              <option value="khm">Central Khmer</option>
+              <option value="lat">Latin</option>
+              <option value="lav">Latvian</option>
+              <option value="lit">Lithuanian</option>
+              <option value="mal">Malayalam</option>
+              <option value="mar">Marathi</option>
+              <option value="mkd">Macedonian</option>
+              <option value="mlt">Maltese</option>
+              <option value="mon">Mongolian</option>
+              <option value="mri">Maori</option>
+              <option value="msa">Malay</option>
+              <option value="nep">Nepali</option>
+              <option value="nld">Dutch</option>
+              <option value="nor">Norwegian</option>
+              <option value="pan">Panjabi</option>
+              <option value="pol">Polish</option>
+              <option value="por">Portuguese</option>
+              <option value="que">Quechua</option>
+              <option value="ron">Romanian</option>
+              <option value="slk">Slovak</option>
+              <option value="slv">Slovenian</option>
+              <option value="smo">Samoan</option>
+              <option value="sqi">Albanian</option>
+              <option value="srp">Serbian</option>
+              <option value="swa">Swahili</option>
+              <option value="swe">Swedish</option>
+              <option value="tam">Tamil</option>
+              <option value="tat">Tatar</option>
+              <option value="tel">Telugu</option>
+              <option value="tha">Thai</option>
+              <option value="ton">Tonga (Tonga Islands)</option>
+              <option value="tur">Turkish</option>
+              <option value="ukr">Ukrainian</option>
+              <option value="urd">Urdu</option>
+              <option value="uzb">Uzbek</option>
+              <option value="vie">Vietnamese</option>
+              <option value="xho">Xhosa</option>
+  			</select>
+  		</div>
+
+  		<div class="input-holder input-holder--half h-float--left">
+  			<h4 class="input__title input__title--white">Ingame Level</h4>
+  			<input tabindex="5" type="number" max="100" min="0" class="input input--text" placeholder="(0-100)" name="game_level" ng-model="profile.game_level">
+  		</div>
+
+  		<div class="input-holder input-holder--half h-float--right">
+  			<h4 class="input__title input__title--white">Ranked <!-- Ingame --> Level</h4>
+  			<input tabindex="6" type="number" max="100" min="0" class="input input--text" placeholder="(0-100)" name="ranked_game_level" ng-model="profile.ranked_game_level">
+  		</div>
+
+  		<div class="h-clear"></div>
+
+  		<div class="input-holder input-holder--half h-float--left">
+  			<h4 class="input__title input__title--white">Age</h4>
+  			<select tabindex="7" class="input input--select" ng-model="profile.age" name="age">
+  				<option value="">Your age</option>
+        
+            <option value="Aim god! (Under 14)">Aim god! (Under 14)</option>
+            <option value="Too much time! (14 to 16)">Too much time! (14 to 16)</option>
+            <option value="Getting Serious! (16 to 18)">Getting Serious! (16 to 18)</option>
+            <option value="School’s out! (18 to 21)">School’s out! (18 to 21)</option>
+            <option value="Student’s paradise?! (21 to 30)">Student’s paradise?! (21 to 30)</option>
+            <option value="Oldschool! (30 to 40)">Oldschool! (30 to 40)</option>
+            <option value="Oldschool? Child’s play! (40+)">Oldschool? Child’s play! (40+)</option>
+  			</select>
+  		</div>
+
+  		<div class="input-holder input-holder--half h-float--right">
+  			<h4 class="input__title input__title--white">Gender</h4>
+  			<select tabindex="8" class="input input--select" ng-model="profile.gender" name="gender">
+  				<option value="">Your gender</option>
+        
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Robot">Robot</option>
+            <option value="Alien">Alien</option>
+            <option value="Raid Boss">Raid Boss</option>
+            <option value="Trash Mob">Trash Mob</option>
+            <option value="Murloc">Murloc</option>
+            <option value="Nazgul">Nazgul</option>
+            <option value="Zombie">Zombie</option>
+  			</select>
+  		</div>
+
+  		<div class="h-clear"></div>
+
+  		<div class="input-holder inoput-holder--role">
+  			<div class="input-holder__box">
+  				<h4 class="input__title input__title--yellow">Favorite Role</h4>
+  				<p class="input__desc">Select your favorite<br> role in Overwatch®</p>
+
+  				<div class="role-label-wrapper" tabindex="9">
+              <input id="role_offense" class="input__radio" 
+                     type="radio" name="favorite_role" value="offense" ng-model="profile.favorite_role">
+    					<label for="role_offense" class="role-label role-label--first h-float--left">
+    						<div class="role-label-img">
+    							<img src="/images/roles/role-offense.png" class="role-label-img__img" alt="touch label icons" />
+    						</div>
+    						<p class="role-label__tag">Offense</p>
+    					</label>
+              <input id="role_defense" class="input__radio" 
+                     type="radio" name="favorite_role" value="defense" ng-model="profile.favorite_role">
+    					<label for="role_defense" class="role-label role-label--first h-float--left">
+    						<div class="role-label-img">
+    							<img src="/images/roles/role-defense.png" class="role-label-img__img" alt="touch label icons" />
+    						</div>
+    						<p class="role-label__tag">Defense</p>
+    					</label>
+              <input id="role_tank" class="input__radio" 
+                     type="radio" name="favorite_role" value="tank" ng-model="profile.favorite_role">
+    					<label for="role_tank" class="role-label role-label--first h-float--left">
+    						<div class="role-label-img">
+    							<img src="/images/roles/role-tank.png" class="role-label-img__img" alt="touch label icons" />
+    						</div>
+    						<p class="role-label__tag">Tank</p>
+    					</label>
+              <input id="role_support" class="input__radio" 
+                     type="radio" name="favorite_role" value="support" ng-model="profile.favorite_role">
+    					<label for="role_support" class="role-label role-label--first h-float--left">
+    						<div class="role-label-img">
+    							<img src="/images/roles/role-support.png" class="role-label-img__img" alt="touch label icons" />
+    						</div>
+    						<p class="role-label__tag">Support</p>
+    					</label>
+					
+  					<div class="h-clear"></div>
+  				</div>
+  			</div>
+  		</div>
+
+  		<div class="input-holder input-holder--heroes">
+  			<div class="input-holder__box">
+  				<h4 class="input__title input__title--yellow">Favorite Heroes</h4>
+  				<p class="input__desc">Select your favorite heroes in Overwatch®</p>
+          
+          <span class="input__desc" ng-hide="profile.favorite_role"><em>Please select your favorite role first!</em></span>
+  				<a tabindex="10" ng-show="profile.favorite_role" href="javascript:void(0);" class="h-button h-button--white h-button--narrow h-button--rounded h-button--shadow-white h-button--no-skew" ng-click="selectHeroes()">Select Heroes</a>
+  			</div>
+  		</div>
+
+  		<div class="input-holder">
+  			<div class="input-holder__box input-holder__box--questions">
+  				<ul class="question-wrapper">
+  					<li class="question question--first">
+  						<input id="voice-chat" class="input__checkbox" type="checkbox" 
+                     name="use_voice_chat" ng-model="profile.use_voice_chat" tabindex="11">
+  						<label for="voice-chat" class="question-touch">
+  							<p class="question-touch__text">Do you use voice chat?</p>
+  						</label>
+  						<label for="voice-chat" class="question-checkbox"></label>
+  					</li>
+  					<li class="question">
+  						<input id="join-team" class="input__checkbox" type="checkbox" tabindex="12"
+                     name="looking_for_compatible_team" ng-model="profile.looking_for_compatible_team">
+  						<label for="join-team" class="question-touch">
+  							<p class="question-touch__text">Looking to join a compatible team to play with?</p>
+  						</label>
+  						<label for="join-team" class="question-checkbox"></label>
+  					</li>
+  					<li class="question">
+  						<input id="build-team" class="input__checkbox" type="checkbox" tabindex="13"
+                     name="looking_to_build_ranked_team" ng-model="profile.looking_to_build_ranked_team">
+  						<label for="build-team" class="question-touch">
+  							<p class="question-touch__text">Looking to build your own ranked team?</p>
+  						</label>
+  						<label for="build-team" class="question-checkbox"></label>
+  					</li>
+  					<li class="question question--last">
+  						<input id="search-team" class="input__checkbox" type="checkbox" tabindex="14"
+                     name="looking_for_ranked_team" ng-model="profile.looking_for_ranked_team">
+  						<label for="search-team" class="question-touch">
+  							<p class="question-touch__text">Looking for a team to play ranked mode?</p>
+  						</label>
+  						<label for="search-team" class="question-checkbox"></label>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+
+  		<div class="input-holder">
+  			<h4 class="input__title input__title--white">How much time do you spend gaming each week?</h4>
+  			<select class="input input--select" name="game_time_per_week" tabindex="15" ng-model="profile.game_time_per_week">
+  				<option value="">Select time spent</option>
+
+            <option value="1-3 hours">1-3 hours</option>
+            <option value="3-7 hours">3-7 hours</option>
+            <option value="7-14 hours">7-14 hours</option>
+            <option value="14+ hours">14+ hours</option>
+  			</select>
+  		</div>
+
+  		<div class="input-holder">
+  			<h4 class="input__title input__title--white">
+          Link to your highlight clip (youtube, facebook, instagram)
+        </h4>
+  			<input type="url" class="input input--text" 
+               placeholder="https://youtu.be/..." name="highlight_clip_url" tabindex="16"
+              ng-model="profile.highlight_clip_url">
+  		</div>
+
+  		<div class="input-holder">
+  			<input type="submit" class="input input--submit h-button h-button--yellow" value="Continue" ng-click="next()" tabindex="17">
+  		</div>
+
+  	</form>
+  </div>
+  
+  <div class="form-wrapper" ng-show="step == 2">
+  	<div class="form-holder" ng-hide="success">
+  		<h1 class="form-wrapper--title h-float--left">Create Account</h1>
+  		<h2 class="form-wrapper--page h-float h-float--right">2 of 2</h2>
+  		<div class="h-clear"></div>
+  		<form name="account_form" class="form" role="POST">
+  			<div class="input-holder">
+  				<h4 class="input__title input__title--white">Email Adress</h4>
+  				<input type="email" class="input input--text" placeholder="example@email.com" required="" ng-model="profile.email">
+  			</div>
+  			<div class="input-holder">
+  				<h4 class="input__title input__title--white">Password</h4>
+  				<input type="password" class="input input--text" placeholder="Type a password" required="" ng-minlength="6" ng-model="profile.password">
+  			</div>
+  			<div class="input-holder">
+  				<h4 class="input__title input__title--white">Confirm Password</h4>
+  				<input type="password" class="input input--text" placeholder="Retype your pasword" required="" ng-minlength="6" ng-model="profile.password_confirmation">
+  			</div>
+
+  			<div class="input-holder">
+  				<input type="submit" class="input input--submit h-button h-button--yellow" value="Create it" ng-click="save()">
+  				
+  			</div>
+  		</form>
+  	</div>
+    
+  	<div class="success" ng-show="success">
+  		<h1 class="success__title">PROFILE CREATED!</h1>
+  		<p class="success__desc">
+        Well done! You have successfully created your profile! Now copy your unique link and share it with the Overwatch® community!
+      </p>
+      
+  		<div class="success-url">
+        https://epick.gg/profiles/{{permalink}}
+        
+      </div>
+  	</div>
+  </div>
+  
+  
+  <div class="overlay__bg avatar-overlay__bg" ng-show="showHeroSelect" ng-class="{'is-open': showHeroSelect}">
+  	<div class="overlay-content avatar-overlay">
+  		<span class="overlay-close">
+        <img class="overlay-close__img" src="/images/close-cross.svg" alt="close overlay"
+             ng-click="hideHeroSelect()">
+      </span>
+  		<ul class="heroes-list">
+
+  			<li class="heroes-list__item heroes-list__item--first">
+  				<div class="heroes-label--first">
+  					<h2 class="heroes-list__title">Overwatch<br> Heroes</h2>
+  					<p class="heroes-list__desc" ng-if="selectField == 'avatar_id'">Select a hero <br> as your avatar</p>
+  					<p class="heroes-list__desc" ng-if="selectField == 'favorite_hero_ids'">Select your favorite heros <br> for your role</p>
+  				</div>
+  			</li>
+
+  			<li ng-repeat="hero in heroes | filter:heroFilter" class="heroes-list__item heroes-list__item--js">	
+	<input id="hero_{{hero.id}}" 
+         class="heroes-input__checkbox" type="checkbox" name="hero" 
+         ng-click="toggleHero(hero.id)" 
+         ng-class="{'checked': heroSelected(hero.id) != -1}">
+	<label for="hero_{{hero.id}}" class="heroes-label">
+		<div class="heroes-label-img">
+			<img class="heroes-label-img__img" 
+           ng-src="/images/heroes/{{hero.id}}@2x.png" 
+           alt="{{hero.name}}">
+		</div>
+		<p class="heroes-label__tag">{{hero.name}}</p>
+	</label>
+</li>
+			
+  			<div class="h-clear"></div>
+  		</ul>
+  		<span class="overlay-button-holder">
+        <a href="javascript:void(0);" class="h-button h-button--yellow overlay-button" ng-click="hideHeroSelect()">Done</a>
+      </span>
+  	</div>
+  </div>
+</div>
+    </div>
+
+    <div class="footer-wrapper">
+	<ul class="nav nav--left">
+		<li class="nav__item"><a href="/login/" class="link link--footer">Login</a></li>
+		<li class="nav__item"><a href="/impressum/" class="link link--footer">Impressum</a></li>
+		<li class="nav__item"><a href="/contacts/" class="link link--footer">Contacts</a></li>
+	</ul>
+	<a href="/" class="branding branding--footer">
+		<img class="branding__logo" src="/images/epick-logo--black.svg" alt="EPICK.GG logo">
+	</a>
+	<ul class="nav nav--right">
+		<li class="nav__item"><a href="/privacy/" class="link link--footer">Privacy Policy</a></li>
+		<!-- <li class="nav__item"><a href="/terms/" class="link link--footer" href="">Terms and conditions</a></li> -->
+	</ul>
+	<div class="h-clear"></div>
+</div>
+  </body>
+</html>

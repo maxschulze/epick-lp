@@ -1,0 +1,181 @@
+<!doctype html>
+<html ng-app="">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title>Login - EPICK.GG</title>
+    <meta name="description" content="The new team building tool for Overwatch" />
+    <meta name="url" content="https://epick.gg/" />
+
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
+    <link href="/stylesheets/site-2714dc4a.css" rel="stylesheet" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#59007c">
+    <meta name="theme-color" content="#1e1727">
+    <meta property="fb:app_id" content="466308243563271">
+    
+      <meta property="og:url" content="https://epick.gg/" />
+      <meta property="og:type" content="product" />
+      <meta property="og:title" content="EPICK.GG" />
+      <meta property="og:description" content="The new team building tool for Overwatch." />
+      <meta property="og:image" content="https://epick.gg/images/have-fun-playing@2x.png" />
+      <meta property="og:site_name" content="EPICK.GG">
+      <meta property="og:locale" content="en_US">
+    
+
+    <script type="text/javascript">
+      window.epick = {};
+      window.epick.heroes = [{"name":"Genji","role":"offense","id":"genji"},{"name":"McCree","role":"offense","id":"mccree"},{"name":"Pharah","role":"offense","id":"pharah"},{"name":"Reaper","role":"offense","id":"reaper"},{"name":"Soldier:76","role":"offense","id":"soldier76"},{"name":"Tracer","role":"offense","id":"tracer"},{"name":"Mei","role":"defense","id":"mei"},{"name":"Bastion","role":"defense","id":"bastion"},{"name":"Hanzo","role":"defense","id":"hanzo"},{"name":"Junkrat","role":"defense","id":"junkrat"},{"name":"Torbjorn","role":"defense","id":"torbjorn"},{"name":"Widowmaker","role":"defense","id":"widowmaker"},{"name":"D.VA","role":"tank","id":"dva"},{"name":"Reinhardt","role":"tank","id":"reinhardt"},{"name":"Roadhog","role":"tank","id":"roadhog"},{"name":"Winston","role":"tank","id":"winston"},{"name":"Zarya","role":"tank","id":"zarya"},{"name":"Ana","role":"support","id":"ana"},{"name":"Lucio","role":"support","id":"lucio"},{"name":"Mercy","role":"support","id":"mercy"},{"name":"Symettra","role":"support","id":"symettra"},{"name":"Zenyatta","role":"support","id":"zenyatta"}];
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/all-91be72bd.js"></script>
+    
+
+  </head>
+
+  <body class="recover recover_index">
+
+    
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MF65QS');</script>
+    
+
+    <div class="main-wrapper">
+      <div class="topbar-wrapper">
+      	<div class="menu-toggle h-float--left">
+      		<span class="menu-toggle__bar"></span>
+      		<span class="menu-toggle__bar menu-toggle__bar--second"></span>
+      		<span class="menu-toggle__bar menu-toggle__bar--third"></span>
+      	</div>
+
+      	<a href="/" class="branding h-float--left">
+      		<img class="branding__logo" src="/images/epick-logo--color.svg" alt="EPICK.GG logo">
+      	</a>
+
+          <ul class="nav">
+  <!-- <li class="nav__item"><a class="link link--nav" href="/login/">Login</a></li> -->
+	<li class="nav__item"><a href="/create-profile/" class="h-button">Create profile</a></li>
+</ul>
+      </div>
+
+      <div class="menu-wrapper">
+	<div class="menu-overlay"></div>
+	<div class="menu">
+    <!-- <div class="menu-header">
+      <span class="menu-header__item menu-header__avatar h-float--left" style="background-image: url(/images/avatar-placeholder.png)">
+      </span>
+      <div class="menu-header__item menu-header__data h-float--left">
+        <label class="menu-header__data-label">Battletag</label>
+        <h2 class="menu-header__data-username">coolbunny #140675467678976547</h2>
+      </div>
+    </div> -->
+		<ul class="menu-links">
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Home</p>
+				</a>
+			</li>
+      <!-- <li class="menu-links__item">
+        <a class="menu-links__item-link" href="/profile/">
+          <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+          <p class="menu-links__item-link-text h-float--left">Profile</p>
+        </a>
+      </li> -->
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="#">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Talk to us on Reddit</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/privacy/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Privacy Policy</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/terms/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Terms and Conditions</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/impressum/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Impressum</p>
+				</a>
+			</li>
+		</ul>
+		<!-- <ul class="menu-links menu-links--signout">
+      <li class="menu-links__item">
+        <a class="menu-links__item-link" href="#">
+          <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+          <p class="menu-links__item-link-text h-float--left">Sign Out</p>
+        </a>
+      </li>
+    </ul> -->
+	</div>
+</div>
+
+      <div class="form-wrapper">
+	<div class="form-holder">
+		<h1 class="form-wrapper--title h-float--left">Recover Password</h1>
+	
+		<div class="h-clear"></div>
+		<form class="form" role="POST">
+			<div class="input-holder">
+				<h4 class="input__title input__title--white">Password</h4>
+				<input type="password" class="input input--text" placeholder="Type a password">
+			</div><!-- input-holder -->
+
+			<div class="input-holder">
+				<h4 class="input__title input__title--white">Repeat Password</h4>
+				<input type="password" class="input input--text" placeholder="Retype the password">
+			</div><!-- input-holder -->
+
+			<div class="input-holder">
+				<input type="submit" class="input input--submit h-button h-button--yellow" value="Recover">
+			</div><!-- input-holder -->
+		</form>
+
+		<div class="forgot-password">
+			<p class="forgot-password__text">Got your password?<br>
+				<a href="/login/" class="forgot-password__text--recover">Login now</a>
+			</p>
+		</div>
+	</div>
+</div>
+    </div>
+
+    <div class="footer-wrapper">
+	<ul class="nav nav--left">
+		<li class="nav__item"><a href="/login/" class="link link--footer">Login</a></li>
+		<li class="nav__item"><a href="/impressum/" class="link link--footer">Impressum</a></li>
+		<li class="nav__item"><a href="/contacts/" class="link link--footer">Contacts</a></li>
+	</ul>
+	<a href="/" class="branding branding--footer">
+		<img class="branding__logo" src="/images/epick-logo--black.svg" alt="EPICK.GG logo">
+	</a>
+	<ul class="nav nav--right">
+		<li class="nav__item"><a href="/privacy/" class="link link--footer">Privacy Policy</a></li>
+		<!-- <li class="nav__item"><a href="/terms/" class="link link--footer" href="">Terms and conditions</a></li> -->
+	</ul>
+	<div class="h-clear"></div>
+</div>
+  </body>
+</html>

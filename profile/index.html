@@ -1,0 +1,334 @@
+<!doctype html>
+<html ng-app="">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title>My Profile - EPICK.GG</title>
+    <meta name="description" content="The new team building tool for Overwatch" />
+    <meta name="url" content="https://epick.gg/" />
+
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
+    <link href="/stylesheets/site-2714dc4a.css" rel="stylesheet" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#59007c">
+    <meta name="theme-color" content="#1e1727">
+    <meta property="fb:app_id" content="466308243563271">
+    
+      <meta property="og:url" content="https://epick.gg/" />
+      <meta property="og:type" content="product" />
+      <meta property="og:title" content="EPICK.GG" />
+      <meta property="og:description" content="The new team building tool for Overwatch." />
+      <meta property="og:image" content="https://epick.gg/images/have-fun-playing@2x.png" />
+      <meta property="og:site_name" content="EPICK.GG">
+      <meta property="og:locale" content="en_US">
+    
+
+    <script type="text/javascript">
+      window.epick = {};
+      window.epick.heroes = [{"name":"Genji","role":"offense","id":"genji"},{"name":"McCree","role":"offense","id":"mccree"},{"name":"Pharah","role":"offense","id":"pharah"},{"name":"Reaper","role":"offense","id":"reaper"},{"name":"Soldier:76","role":"offense","id":"soldier76"},{"name":"Tracer","role":"offense","id":"tracer"},{"name":"Mei","role":"defense","id":"mei"},{"name":"Bastion","role":"defense","id":"bastion"},{"name":"Hanzo","role":"defense","id":"hanzo"},{"name":"Junkrat","role":"defense","id":"junkrat"},{"name":"Torbjorn","role":"defense","id":"torbjorn"},{"name":"Widowmaker","role":"defense","id":"widowmaker"},{"name":"D.VA","role":"tank","id":"dva"},{"name":"Reinhardt","role":"tank","id":"reinhardt"},{"name":"Roadhog","role":"tank","id":"roadhog"},{"name":"Winston","role":"tank","id":"winston"},{"name":"Zarya","role":"tank","id":"zarya"},{"name":"Ana","role":"support","id":"ana"},{"name":"Lucio","role":"support","id":"lucio"},{"name":"Mercy","role":"support","id":"mercy"},{"name":"Symettra","role":"support","id":"symettra"},{"name":"Zenyatta","role":"support","id":"zenyatta"}];
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/all-91be72bd.js"></script>
+    
+
+  </head>
+
+  <body class="profile profile_index">
+
+    
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MF65QS');</script>
+    
+
+    <div class="main-wrapper">
+      <div class="topbar-wrapper">
+      	<div class="menu-toggle h-float--left">
+      		<span class="menu-toggle__bar"></span>
+      		<span class="menu-toggle__bar menu-toggle__bar--second"></span>
+      		<span class="menu-toggle__bar menu-toggle__bar--third"></span>
+      	</div>
+
+      	<a href="/" class="branding h-float--left">
+      		<img class="branding__logo" src="/images/epick-logo--color.svg" alt="EPICK.GG logo">
+      	</a>
+
+          <ul class="nav">
+  <!-- <li class="nav__item"><a class="link link--nav" href="/login/">Login</a></li> -->
+	<li class="nav__item"><a href="/create-profile/" class="h-button">Create profile</a></li>
+</ul>
+      </div>
+
+      <div class="menu-wrapper">
+	<div class="menu-overlay"></div>
+	<div class="menu">
+    <!-- <div class="menu-header">
+      <span class="menu-header__item menu-header__avatar h-float--left" style="background-image: url(/images/avatar-placeholder.png)">
+      </span>
+      <div class="menu-header__item menu-header__data h-float--left">
+        <label class="menu-header__data-label">Battletag</label>
+        <h2 class="menu-header__data-username">coolbunny #140675467678976547</h2>
+      </div>
+    </div> -->
+		<ul class="menu-links">
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Home</p>
+				</a>
+			</li>
+      <!-- <li class="menu-links__item">
+        <a class="menu-links__item-link" href="/profile/">
+          <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+          <p class="menu-links__item-link-text h-float--left">Profile</p>
+        </a>
+      </li> -->
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="#">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Talk to us on Reddit</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/privacy/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Privacy Policy</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/terms/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Terms and Conditions</p>
+				</a>
+			</li>
+			<li class="menu-links__item">
+				<a class="menu-links__item-link" href="/impressum/">
+					<img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+					<p class="menu-links__item-link-text h-float--left">Impressum</p>
+				</a>
+			</li>
+		</ul>
+		<!-- <ul class="menu-links menu-links--signout">
+      <li class="menu-links__item">
+        <a class="menu-links__item-link" href="#">
+          <img class="menu-links__item-link-icon h-float--left" src="/images/menu__profile-icon.svg" alt="home icon">
+          <p class="menu-links__item-link-text h-float--left">Sign Out</p>
+        </a>
+      </li>
+    </ul> -->
+	</div>
+</div>
+
+      <div class="form-wrapper form-wrapper--profile">
+	<h1 class="form-wrapper--title">Your Profile</h1>
+
+	<div class="profile">
+		<div class="input-holder">
+			<div class="avatar-box input-holder__box">
+				<div class="avatar-box__img h-float--left"></div>
+				<div class="avatar-box__content h-float--left">
+					<h4 class="input__title input__title--yellow input__title--no-pad-bottom">Battletag</h4>
+					<h2 class="input__desc username__title">coolbunny #1406</h2>
+					<div class="ranked">
+						<div class="ranked-card ranked-card--white h-float--left">
+							<h2 class="ranked-card__title">69</h2>
+							<ul class="ranked-card-stars">
+								<li class="ranked-card-stars__diamond"></li>
+								<li class="ranked-card-stars__diamond"></li>
+								<li class="ranked-card-stars__diamond"></li>
+							</ul>
+						</div>
+						<div class="ranked-card ranked-card--purple h-float--left">
+							<h2 class="ranked-card__title">69</h2>
+							<ul class="ranked-card-stars">
+								<li class="ranked-card-stars__diamond"></li>
+								<li class="ranked-card-stars__diamond"></li>
+								<li class="ranked-card-stars__diamond"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div> 
+		</div>
+
+		<div class="input-holder input-holder--half input-holder--full-mobile h-float--left">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<span class="input-holder-profile__item input-holder-profile__avatar h-float--left" style="background-image: url(/images/avatar-placeholder.png)">
+				</span>
+				<div class="input-holder-profile__item input-holder-profile__data h-float--left">
+					<label class="input-holder-profile__data-label">Gender</label>
+					<h2 class="input-holder-profile__data-role">Male</h2>
+				</div>
+			</div> 
+		</div>
+
+		<div class="input-holder input-holder--half input-holder--full-mobile h-float--right">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<span class="input-holder-profile__item input-holder-profile__avatar h-float--left" style="background-image: url(/images/avatar-placeholder.png)">
+				</span>
+				<div class="input-holder-profile__item input-holder-profile__data h-float--left">
+					<label class="input-holder-profile__data-label">Favorite Role</label>
+					<h2 class="input-holder-profile__data-role">DEFENDER</h2>
+				</div>
+			</div> 
+		</div>
+
+		<div class="input-holder">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<ul class="input-holder-col">
+					<li class="input-holder-col__item h-float--left">
+						<label class="input-holder-profile__data-label">Region</label>
+						<h2 class="input-holder-profile__data-role">Europe</h2>
+					</li>
+					<li class="input-holder-col__item h-float--left">
+						<label class="input-holder-profile__data-label">Location</label>
+						<h2 class="input-holder-profile__data-role">Portugal</h2>
+					</li>
+					<li class="input-holder-col__item h-float--left">
+						<label class="input-holder-profile__data-label">Language</label>
+						<h2 class="input-holder-profile__data-role">Portuguese</h2>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div> 
+		</div>
+
+		<div class="input-holder">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<ul class="input-holder-col">
+					<li class="input-holder-col__item h-float--left">
+						<label class="input-holder-profile__data-label">Weekly Hrs</label>
+						<h2 class="input-holder-profile__data-role">14+ hours</h2>
+					</li>
+					<li class="input-holder-col__item h-float--left">
+						<label class="input-holder-profile__data-label">Age</label>
+						<h2 class="input-holder-profile__data-role">(Oldscholl) +40</h2>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div> 
+		</div>
+
+		<div class="input-holder inoput-holder--role">
+			<div class="input-holder__box input-holder-profile">
+				<h4 class="input__title input__title--yellow">Favorite Role</h4>
+
+				<div class="role-label-wrapper">
+					<label class="role-label role-label--profile role-label--first h-float--left">
+						<div class="role-label-img">
+							<img class="role-label-img__img" src="/images/roles/role-offense.png" alt="touch label icons">
+						</div>
+						<p class="role-label__tag">junkrat</p>
+					</label>
+					
+					<label class="role-label role-label--profile h-float--left">
+						<div class="role-label-img">
+							<img class="role-label-img__img" src="/images/roles/role-defense.png" alt="touch label icons">
+						</div>
+						<p class="role-label__tag">reaper</p>
+					</label>
+					
+					<label class="role-label role-label--profile h-float--left">
+						<div class="role-label-img">
+							<img class="role-label-img__img" src="/images/roles/role-tank.png" alt="touch label icons">
+						</div>
+						<p class="role-label__tag">zenyatta</p>
+					</label>
+
+					<div class="h-clear"></div>
+			
+				</div>
+			</div>
+		</div>
+
+		<div class="input-holder input-holder--same-group">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<span class="input-holder-profile__item input-holder-profile__avatar h-float--left" style="background-image: url(/images/voice-chat-icon.svg)">
+				</span>
+				<div class="input-holder-profile__item input-holder-profile__data h-float--left">
+					<p class="input-holder-profile__questions-text">Uses voice chat</p>
+				</div>
+			</div> 
+		</div>
+		<div class="input-holder input-holder--same-group">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<span class="input-holder-profile__item input-holder-profile__avatar h-float--left" style="background-image: url(/images/compatible-people-icon.svg)">
+				</span>
+				<div class="input-holder-profile__item input-holder-profile__data h-float--left">
+					<p class="input-holder-profile__questions-text">Looking for compatible people</p>
+				</div>
+			</div> 
+		</div>
+		<div class="input-holder input-holder--same-group">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<span class="input-holder-profile__item input-holder-profile__avatar h-float--left" style="background-image: url(/images/ranked-team-icon.svg)">
+				</span>
+				<div class="input-holder-profile__item input-holder-profile__data h-float--left">
+					<p class="input-holder-profile__questions-text">Looking to build ranked team</p>
+				</div>
+			</div> 
+		</div>
+
+		<div class="input-holder">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<div class="input-holder-profile__item input-holder-profile__data">
+					<label class="input-holder-profile__data-label">Highlight</label>
+					<h2 class="input-holder-profile__data-role">COOLBUNY’S EPICK MOMENT!</h2>
+				</div>
+				<iframe class="input-holder__video" width="100%" height="315" src="https://www.youtube.com/embed/8tvmNzXAMfQ" frameborder="0" allowfullscreen></iframe>
+			</div> 
+		</div>
+
+		<div class="input-holder input-holder--share">
+			<div class="avatar-box input-holder__box input-holder-profile">
+				<div class="input-holder-profile__item input-holder-profile__item--share">
+					<label class="input-holder-profile__data-label">Highlight</label>
+					<p class="input-holder-profile__item--share-text">Like your profile? Share it with<br> the Overwatch® community!</p>
+				</div>
+				<ul class="share-list">
+					<li class="share-list__item h-float--left"><a href=""><img src="/images/link-icon.svg" alt=""></a></li>
+					<li class="share-list__item h-float--left"><a href=""><img src="/images/reddit-icon.svg" alt=""></a></li>
+					<li class="share-list__item h-float--left"><a href=""><img src="/images/facebook-icon.svg" alt=""></a></li>
+					<li class="share-list__item h-float--left"><a href=""><img src="/images/twitter-icon.svg" alt=""></a></li>
+					<div class="clear"></div>
+				</ul>
+			</div> 
+		</div>
+
+
+
+	</div> 
+</div>
+    </div>
+
+    <div class="footer-wrapper">
+	<ul class="nav nav--left">
+		<li class="nav__item"><a href="/login/" class="link link--footer">Login</a></li>
+		<li class="nav__item"><a href="/impressum/" class="link link--footer">Impressum</a></li>
+		<li class="nav__item"><a href="/contacts/" class="link link--footer">Contacts</a></li>
+	</ul>
+	<a href="/" class="branding branding--footer">
+		<img class="branding__logo" src="/images/epick-logo--black.svg" alt="EPICK.GG logo">
+	</a>
+	<ul class="nav nav--right">
+		<li class="nav__item"><a href="/privacy/" class="link link--footer">Privacy Policy</a></li>
+		<!-- <li class="nav__item"><a href="/terms/" class="link link--footer" href="">Terms and conditions</a></li> -->
+	</ul>
+	<div class="h-clear"></div>
+</div>
+  </body>
+</html>

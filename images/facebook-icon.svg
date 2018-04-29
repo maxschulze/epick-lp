@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>facebook-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Profile" transform="translate(-625.000000, -2082.000000)">
+            <g id="Share" transform="translate(470.000000, 1969.000000)">
+                <g id="facebook-icon" transform="translate(155.000000, 113.000000)">
+                    <rect id="Rectangle-5" fill="#FFFFFF" x="0" y="0" width="50" height="50" rx="1.66666667"></rect>
+                    <path d="M31.1111111,25 L27.2222222,25 L27.2222222,38.3333333 L21.9444444,38.3333333 L21.9444444,25 L18.3333333,25 L18.3333333,20.4112554 L21.9444444,20.4112554 L21.9444444,17.7272727 C21.9444444,15.7070615 22.345677,14.1919238 23.1481481,13.181821 C23.9506193,12.1717126 25.4629511,11.6666667 27.6851852,11.6666667 L31.5740741,11.6666667 L31.5740741,16.2554113 L29.1666667,16.2554113 C28.3024652,16.2554113 27.7623467,16.3997077 27.5462993,16.6883117 C27.3302459,16.9769157 27.2222222,17.4675269 27.2222222,18.1601732 L27.2222222,20.4112554 L31.6666667,20.4112554 L31.1111111,25 Z" id="Path" fill="#30343C"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
